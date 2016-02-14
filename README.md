@@ -1,6 +1,4 @@
-# OSX
-
-[![Patreon](https://img.shields.io/badge/patreon-donate-brightgreen.svg)](https://www.patreon.com/bkuhlmann)
+# OSX Developer Kit
 
 Shell scripts for automated OS X machine setup.
 
@@ -11,22 +9,8 @@ Shell scripts for automated OS X machine setup.
 - [Features](#features)
 - [Requirements](#requirements)
 - [Setup](#setup)
-  - [OS X (El Capitan)](#os-x-el-capitan)
-    - [Bootdisk](#bootdisk)
-    - [Upgrade](#upgrade)
-    - [Reinstall](#reinstall)
-  - [Clone Project](#clone-project)
 - [Usage](#usage)
   - [Customization](#customization)
-- [Additional Software](#additional-software)
-  - [App Store](#app-store)
-  - [Miscellaneous](#miscellaneous)
-  - [Post Install Checklist](#post-install-checklist)
-- [Versioning](#versioning)
-- [Code of Conduct](#code-of-conduct)
-- [Contributions](#contributions)
-- [License](#license)
-- [History](#history)
 - [Credits](#credits)
 
 <!-- Tocer[finish]: Auto-generated, don't remove. -->
@@ -44,62 +28,61 @@ Shell scripts for automated OS X machine setup.
     - [asciinema](https://asciinema.org)
     - [ShellCheck](https://github.com/koalaman/shellcheck)
     - [Colorized Cat](https://github.com/jingweno/ccat)
-    - [tmux](http://tmux.sourceforge.net)
-    - [Mosh](http://mosh.mit.edu)
-    - [Reattach to User Namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
-    - [Z](https://github.com/rupa/z)
     - [Tree](http://mama.indstate.edu/users/ice/tree)
     - [hr](https://github.com/LuRsT/hr)
     - [Git](http://git-scm.com)
-    - [Mecurial](http://mercurial.selenic.com)
     - [Hub](https://github.com/defunkt/hub)
-    - [GHI](https://github.com/stephencelis/ghi)
-    - [CTags](http://ctags.sourceforge.net)
-    - [Tag](https://github.com/jdberry/tag)
-    - [Parallel](https://savannah.gnu.org/projects/parallel)
     - [Pigz](http://www.zlib.net/pigz)
-    - [jq](http://stedolan.github.com/jq)
-    - [The Silver Surfer](https://github.com/ggreer/the_silver_searcher)
     - [Pipe Viewer](http://www.ivarch.com/programs/pv.shtml)
     - [HTTPie](https://github.com/jkbrzt/httpie)
     - [Ioping](https://code.google.com/p/ioping)
     - [Network Grep](http://ngrep.sourceforge.net)
     - [Namebench](https://code.google.com/p/namebench)
-    - [ImageMagick](http://www.imagemagick.org)
-    - [Graphviz](http://www.graphviz.org)
     - [FLAC](https://www.xiph.org/flac)
     - [FFmpeg](http://ffmpeg.org)
-    - [Gifsicle](http://www.lcdf.org/gifsicle)
     - [Node.js](http://nodejs.org)
-    - [Phantom.js](http://phantomjs.org)
     - [rbenv](https://github.com/sstephenson/rbenv)
     - [rbenv-build](https://github.com/sstephenson/ruby-build)
     - [rbenv-vars](https://github.com/sstephenson/rbenv-vars)
-    - [rbenv-ctags](https://github.com/tpope/rbenv-ctags)
-    - [Ruby](http://www.ruby-lang.org)
     - [Rust](https://www.rust-lang.org)
     - [Go](http://golang.org)
-    - [FZF](https://github.com/junegunn/fzf)
     - [Peco](https://github.com/peco/peco)
-    - [Nginx](http://wiki.nginx.org)
-    - [Pow](http://pow.cx)
-    - [Memcached](http://memcached.org)
-    - [Redis](http://redis.io)
-    - [PostgreSQL](http://www.postgresql.org)
-    - [pgcli](http://pgcli.com)
-    - [Wry](https://github.com/hoop33/wry)
-    - [lnav](http://braumeister.org/formula/lnav)
-    - [cloc](http://cloc.sourceforge.net)
-    - [Terminal Notifier](https://github.com/alloy/terminal-notifier)
-    - [Watchman](https://github.com/facebook/watchman)
+    - [exiv2](http://www.exiv2.org)
+    - [findutils](http://www.gnu.org/software/findutils/)
+    - [NTFS-3G](http://www.tuxera.com/community/open-source-ntfs-3g/)
+    - [cowsay](https://github.com/sckott/cowsay)
+    - [sl](https://github.com/mtoyoda/sl)
+    - [GDBM](http://www.gnu.org.ua/software/gdbm/)
+    - [MySQL](https://www.mysql.com)
+    - [SQLite](https://www.sqlite.org)
+    - [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config)
+    - [Python](https://www.python.org)
+    - [Python 3](https://www.python.org)
+    - [PortAudio](http://www.portaudio.com)
+    - [wget](https://www.gnu.org/software/wget/)
 
-- Downloads, installs, and configures software applications generally not in the [App Store](http://www.apple.com/macosx/whats-new/app-store.html):
-    - [Dropbox](https://www.dropbox.com)
+- Downloads and installs:
     - [Sublime Text 3](http://www.sublimetext.com)
+    - [VirtualBox](https://www.virtualbox.org)
+    - [MacTeX](https://www.tug.org/mactex)
+    - [Vagrant](https://www.vagrantup.com)
+    - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+    - [PyCharm](https://www.jetbrains.com/pycharm)
+    - [CLion](https://www.jetbrains.com/clion)
+    - [App Cleaner](http://www.freemacsoft.net/appcleaner)
+    - [OSXFuse](https://osxfuse.github.io)
+    - [JavaDK](http://www.oracle.com/technetwork/java/javase/index.html)
+    - [Flux](https://justgetflux.com)
+    - [SwitchResX](http://www.madrau.com)
+    - [The Unarchiever](http://wakaba.c3.cx/s/apps/unarchiver.html)
+    - [Dropbox](https://www.dropbox.com)
     - [Google Chrome](http://www.google.com/chrome)
     - [Firefox](http://www.mozilla.com/en-US/firefox)
-    - [VirtualBox](https://www.virtualbox.org)
-    - [App Cleaner](http://www.freemacsoft.net/appcleaner)
+    - [Skype](http://www.skype.com)
+    - [Spotify](https://www.spotify.com)
+    - [MPlayerX](http://mplayerx.org)
+    - [Transmission](http://www.transmissionbt.com)
+
 - Downloads, installs, and configures software extensions:
     - [Sublime Text 3 Git Gutter](https://github.com/jisaacks/GitGutter)
     - [Sublime Text 3 CTags](https://github.com/SublimeText/CTags)
@@ -114,6 +97,79 @@ Shell scripts for automated OS X machine setup.
     - [Sublime Text 3 CSScomb](https://github.com/csscomb/csscomb-for-sublime)
     - [Sublime Text 3 Coffee Script](https://github.com/Xavura/CoffeeScript-Sublime-Plugin)
     - [Sublime Text 3 HTML Prettify](https://github.com/victorporof/Sublime-HTMLPrettify)
+    - [Sublime Text 3 Flatland - Theme](https://github.com/thinkpixellab/flatland)
+
+- Downloads and installs Python packages:
+    - all
+    - appnope
+    - backports-abc
+    - backports.shutil-get-terminal-size
+    - backports.ssl-match-hostname
+    - BeautifulSoup
+    - beautifulsoup4
+    - certifi
+    - chardet
+    - CherryPy
+    - columnize
+    - coverage
+    - crypto
+    - decorator
+    - Django
+    - dropbox
+    - feedparser
+    - gitdb
+    - GitPython
+    - gnureadline
+    - import-relative
+    - ipdb
+    - ipython
+    - ipython-genutils
+    - lxml
+    - MySQL-python
+    - Naked
+    - netifaces
+    - nose
+    - oauthlib
+    - path.py
+    - pdb
+    - pexpect
+    - pickleshare
+    - Pillow
+    - psutil
+    - ptyprocess
+    - py
+    - pyasn1
+    - PyAudio
+    - pycrypto
+    - pyficache
+    - Pygments
+    - PyMySQL
+    - pyowm
+    - pysqlite
+    - pytest
+    - python-gnupg
+    - python-twitter
+    - pytube
+    - PyYAML
+    - requests
+    - requests-oauthlib
+    - shellescape
+    - simplegeneric
+    - singledispatch
+    - six
+    - smmap
+    - timeout
+    - tornado
+    - tracer
+    - traitlets
+    - tweepy
+    - urllib3
+    - vboxapi
+    - virtualenv
+    - wget
+    - wheel
+
+- Downloads and applies the dotfiles from this [repository](https://github.com/pbmartins/dotfiles).
 
 # Requirements
 
@@ -139,17 +195,20 @@ following command:
 Running the run.sh script will present the following options:
 
     Setup:
-      b:  Apply basic system settings.
-      h:  Install Homebrew software.
-      a:  Install application software (Homebrew and Cask required).
-      x:  Install application (Sublime Text 3) extensions.
-      p:  Install Python packages.
-      d:  Apply OS and software defaults.
-      f:  Apply dotfiles.
-      i:  Install everything (i.e. executes all options, listed above, top to bottom).
+        b:   Apply basic system settings.
+        h:   Install Homebrew software.
+        ha:  Install ALL Homebrew software.
+        a:   Install application software (Homebrew and Cask required).
+        aa:  Install ALL application software (Homebrew and Cask required).
+        x:   Install application (Sublime Text 3) extensions.
+        p:   Install Python packages (Python pip required).
+        pa:  Install ALL Python packages (Python pip required).
+        d:   Apply OS and software defaults.
+        f:   Apply dotfiles.
+        i:   Install everything (i.e. executes all options, listed above, top to bottom).
     Manage:
-      C:  Caffeinate machine.
-      q:  Quit/Exit.
+        C:  Caffeinate machine.
+        q:  Quit/Exit.
 
 Choose option 'i' to run all install tasks or select a specific option to run a single task. Each task is designed to
 be re-run if necessary. This can also be handy for performing upgrades, re-running a missing/failed install, etc.
@@ -160,25 +219,15 @@ It is recommended that the machine be rebooted after all install tasks have comp
 
 You can also modify the install scripts themselves by editing any of the following:
 
-- scripts/homebrew.sh = Installs Homebrew, command line, software.
-- scripts/applications.sh = Installs OS X, GUI-based, applications.
+- scripts/homebrew.sh = Installs Homebrew, command line, software (if you don't choose to select ALL binaries, each one will ask you if you want to install it).
+- scripts/applications.sh = Installs OS X, GUI-based, applications (if you don't choose to select ALL apps, each one will ask you if you want to install it).
 - scripts/extensions.sh = Installs Sublime Text 3 extensions.
 - scripts/defaults.sh = Applies system and application defaults.
-- scripts/python.txt = List of all Python packages.
-
-All Bash functions, used by the scripts defined above, can be found in the `lib` folder of this project.
-
-
-# License
-
-Copyright (c) 2012 [Alchemists](https://www.alchemists.io).
-Read the [LICENSE](LICENSE.md) for details.
-
-# History
-
-Read the [CHANGELOG](CHANGELOG.md) for details.
-Built with [Bashsmith](https://github.com/bkuhlmann/bashsmith).
+- scripts/pythonpackages.sh = Installs all Python packages (if you don't choose to select ALL packages, each one will ask you if you want to install it).
 
 # Credits
 
-Developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io).
+Based on the OSX guide developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io).
+
+Feel free to suggest any software, binary or package. Hope you enjoy it!
+Pedro Martins

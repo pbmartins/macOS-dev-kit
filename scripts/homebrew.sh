@@ -5,12 +5,15 @@
 
 # EXECUTION
 # Homebrew
-echo "Checking for Homebrew..."
+printf "Checking for Homebrew... "
 if ! command -v brew > /dev/null; then
+	echo "Homebrew not installed!"
 	echo "Installing Homebrew..."
  	ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	export PATH="/usr/local/bin:$PATH"
 	printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
+else
+	echo "Homebrew installed."
 fi
 
 echo "Updating brew..."
@@ -23,9 +26,12 @@ echo "Installing more recent versions of some OS X tools..."
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-echo "Installing and linking OpenSSL"
+echo "Installing and linking OpenSSL..."
 brew install openssl
 brew link openssl --force
+
+echo "Installing Cask..."
+brew install caskroom/cask/brew-cask
 
 homebrew_binaries=(
 	readline
@@ -46,6 +52,7 @@ homebrew_binaries=(
 	ioping
 	ngrep
 	namebench
+	node
 	flac
 	ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
 	jpeg
@@ -71,14 +78,23 @@ homebrew_binaries=(
 	wget
 )
 
-echo "Installing Homebrew binaries..."
-brew install ${homebrew_binaries[@]}
+if [[ $# == 0 ]]; then
+	echo "Installing Homebrew binaries..."
+
+	for ((i=0; i < ${#homebrew_binaries[@]}; i++))
+	do
+		printf "Do you want to install ${homebrew_binaries[$i]}? (y/n)  "
+		read -r response
+		if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+			brew install ${homebrew_binaries[$i]}
+		fi
+	done
+else
+	echo "Installing all Homebrew binaries..."
+	brew install ${homebrew_binaries[@]}
+fi
 
 echo "Cleaning up..."
 brew cleanup
 
-echo "Installing Cask..."
-brew install caskroom/cask/brew-cask
-
-echo "Adding nightly/beta Cask versions..."
-brew tap caskroom/versions
+echo "All selected Homebrew binaries installed!"

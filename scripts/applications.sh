@@ -3,9 +3,11 @@
 # DESCRIPTION
 # Installs OSX applications.
 
-echo "Checking for Homebrew..."
+printf "Checking for Homebrew... "
 if ! command -v brew > /dev/null; then
 	echo "WARNING: Homebrew is not installed. First install Homebrew and its binaries to install all the apps."
+else
+	echo "Homebrew instaled."
 fi
 
 apps=(
@@ -14,6 +16,9 @@ apps=(
 	virtualbox
 	mactex
 	vagrant
+	intellij-idea
+	pycharm
+	clion
 
 	# productivity, core, runtimes
 	appcleaner
@@ -41,35 +46,45 @@ apps=(
 	transmission
 )
 
-echo "Installing apps to /Applications..."
-brew cask install --appdir="/Applications" ${apps[@]}
-
-ide=(
-	intellij-idea
-	pycharm
-	clion
+names=(
+	'Sublime Text 3'
+	'VirtualBox'
+	'MacTeX'
+	'Vagrant'
+	'IntelliJ IDEA - Professional Version'
+	'PyCharm - Professional Version'
+	'CLion - Professional Version'
+	'AppCleaner'
+	'OSXFuse'
+	'JavaSDK'
+	'SwitchResX - Paid Version'
+	'flux'
+	'The Unarchiever'
+	'Dropbox'
+	'Google Chrome'
+	'Mozilla Firefox'
+	'Skype'
+	'Spotify'
+	'MPlayerX'
+	'Transmission'
 )
 
+if [[ $# == 0 ]]; then
+	echo "Installing apps to /Applications..."
 
-# IntelliJ IDEA 15
-echo "Do you want to install JetBrains IntelliJ IDEA 15 (professional-version)? (y/n)"
-read -r response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	brew cask install --appdir="/Applications" ${ide[0]}
+	for ((i=0; i < ${#apps[@]}; i++))
+	do
+		printf "Do you want to install ${names[$i]}? (y/n)  "
+		read -r response
+		if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+			brew cask install --appdir="/Applications" ${apps[$i]}
+		fi
+	done
+else
+	echo "Installing all apps to /Applications..."
+	brew cask install --appdir="/Applications" ${apps[@]}
 fi
 
-# PyCharm
-echo "Do you want to install JetBrains PyCharm (professional-version)? (y/n)"
-read -r response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	brew cask install --appdir="/Applications" ${ide[1]}
-fi
-
-# CLion
-echo "Do you want to install JetBrains CLion (professional-version)? (y/n)"
-read -r response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	brew cask install --appdir="/Applications" ${ide[2]}
-fi
-
+echo "Cleaning Homebrew Cask chache..."
 brew cask cleanup
+echo "Selected applications instaled!"
