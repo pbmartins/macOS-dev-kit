@@ -5,121 +5,80 @@
 
 # EXECUTION
 # Homebrew
+echo "Checking for Homebrew..."
 if ! command -v brew > /dev/null; then
-  ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  export PATH="/usr/local/bin:$PATH"
-  printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
+	echo "Installing Homebrew..."
+ 	ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	export PATH="/usr/local/bin:$PATH"
+	printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
 fi
 
-# Readline
-brew install readline
+echo "Updating brew..."
+brew update
 
-# OpenSSL
+echo "Installing GNU core utils (those that come with OS X are outdated)..."
+brew install coreutils
+
+echo "Installing more recent versions of some OS X tools..."
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+
+echo "Installing and linking OpenSSL"
 brew install openssl
 brew link openssl --force
 
-# GPG
-brew install gpg
+homebrew_binaries=(
+	readline
+	gpg
+	bash
+	bash-completion
+	vim
+	asciinema
+	shellcheck
+	ccat
+	tree
+	hr
+	git
+	hub
+	pigz
+	pv
+	httpie
+	ioping
+	ngrep
+	namebench
+	flac
+	ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
+	jpeg
+	gifsicle
+	rbenv
+	ruby-build
+	rbenv-vars
+	rust
+	go
+	peco
+	exiv2
+	findutils
+	ntfs-3g
+	cowsay
+	sl
+	gdbm
+	mysql
+	sqlite
+	pkg-config
+	python
+	python3
+	portaudio
+	wget
+)
 
-# Bash
-brew install bash
+echo "Installing Homebrew binaries..."
+brew install ${homebrew_binaries[@]}
 
-# Bash Completion
-brew install bash-completion
+echo "Cleaning up..."
+brew cleanup
 
-# Vim
-brew install vim
+echo "Installing Cask..."
+brew install caskroom/cask/brew-cask
 
-# asciinema
-brew install asciinema
-
-# ShellCheck
-brew install shellcheck
-
-# Colorized Cat
-brew install ccat
-
-# Tree
-brew install tree
-
-# hr
-brew install hr
-
-# Git
-brew install git
-
-# GitHub
-brew install hub
-
-# Pigz
-brew install pigz
-
-# Pipe Viewer
-brew install pv
-
-# HTTPie
-brew install httpie
-
-# Ioping
-brew install ioping
-
-# Network Grep
-brew install ngrep
-
-# Namebench
-brew install namebench
-
-# FLAC
-brew install flac
-
-# FFmpeg
-brew install ffmpeg
-
-# JPEG
-brew install jpeg
-
-# Gifsicle
-brew install gifsicle
-
-# Node
-brew install node
-
-# rbenv
-brew install rbenv
-brew install ruby-build
-brew install rbenv-vars
-
-# Rust
-brew install rust
-
-# Go
-brew install go
-
-# Peco
-brew install peco
-
-# exiv2
-brew install exiv2
-
-# findutils
-brew install findutils
-
-# ntfs-3g
-brew install ntfs-3g
-
-# Jokes
-brew install cowsay
-brew install sl
-
-# gdbm
-brew install gdbm
-
-# mysql
-brew install mysql
-
-# sqlite3
-brew install sqlite
-
-# Python
-brew install python
-brew install python3
+echo "Adding nightly/beta Cask versions..."
+brew tap caskroom/versions

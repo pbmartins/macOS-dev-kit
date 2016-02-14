@@ -3,6 +3,9 @@
 # DESCRIPTION
 # Applies system and application defaults.
 
+# Ask for the administrator password upfront
+sudo -v
+
 # EXECUTION
 printf "System - Disable boot sound effects\n"
 sudo nvram SystemAudioVolume=" "
@@ -59,7 +62,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 printf "Bluetooth - Increase sound quality for headphones/headsets\n"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-printf "Menu Bar - Show only Bluetooth and Airport\n"
+printf "Menu Bar - Show only Bluetooth, Airport, TimeMachine, Battery and Clock\n"
 for domain in $HOME/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write "${domain}" dontAutoLoad -array "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 done
@@ -80,16 +83,16 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 printf "Dock - Don’t show Dashboard as a Space\n"
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
 
-printf "Dock - Set the icon size of Dock items to 38 pixels"
+printf "Dock - Set the icon size of Dock items to 38 pixels\n"
 defaults write com.apple.dock tilesize -int 38
 
-printf "Dock - Show indicator lights for open applications in the Dock"
+printf "Dock - Show indicator lights for open applications in the Dock\n"
 defaults write com.apple.dock show-process-indicators -bool true
 
-printf "Dock - Speed up Mission Control animations"
+printf "Dock - Speed up Mission Control animations\n"
 defaults write com.apple.dock expose-animation-duration -float 0.12
 
-printf "Dock - Speed up Launchpad animations"
+printf "Dock - Speed up Launchpad animations\n"
 defaults write com.apple.dock springboard-show-duration -float 0.1
 defaults write com.apple.dock springboard-hide-duration -float 0.1
 
@@ -143,7 +146,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 printf "Safari - Disable sending search queries to Apple.\n"
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 
-printf "Safari - Prevent Safari from opening ‘safe’ files automatically after downloading"
+printf "Safari - Prevent Safari from opening ‘safe’ files automatically after downloading\n"
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 printf "Chrome - Prevent native print dialog, use system dialog instead\n"
@@ -193,9 +196,31 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 printf "App Store - Enable Debug Menu in the Mac App Store\n"
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-printf "Terminal - Only use UTF-8"
+printf "Terminal - Only use UTF-8\n"
 defaults write com.apple.terminal StringEncodings -array 4
 
-printf "Terminal - Use Pro theme by default"
+printf "Terminal - Use Pro theme by default\n"
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+printf "Transmission - Don’t prompt for confirmation before downloading"
+defaults write org.m0k.transmission DownloadAsk -bool false
+
+printf "Transmission - Trash original torrent files"
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+printf "Transmission - Hide the donate message"
+defaults write org.m0k.transmission WarningDonate -bool false
+
+printf "Transmission - Hide the legal disclaimer"
+defaults write org.m0k.transmission WarningLegal -bool false
+
+printf "Sublime Text - Install sublime settings"
+cp -r lib/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+	"Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SystemUIServer" "Terminal" \
+	"Transmission" "iCal"; do
+	killall "${app}" &> /dev/null
+done
+echo "Done. Note that some of these changes require a logout/restart to take effect."

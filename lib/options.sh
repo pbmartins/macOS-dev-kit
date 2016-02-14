@@ -26,8 +26,8 @@ process_option() {
     'd')
       scripts/defaults.sh
       break;;
-    's')
-      scripts/setup.sh
+    'f')
+      scripts/dotfiles.sh
       break;;
     'i')
       caffeinate_machine
@@ -37,31 +37,7 @@ process_option() {
       scripts/extensions.sh
       CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments sudo -E pip install -r scripts/python.txt
       scripts/defaults.sh
-      scripts/setup.sh
-      clean_work_path
-      break;;
-    'c')
-      verify_homebrews
-      verify_applications
-      verify_extensions
-      break;;
-    'C')
-      caffeinate_machine
-      break;;
-    'ua')
-      uninstall_application
-      break;;
-    'ux')
-      uninstall_extension
-      break;;
-    'ra')
-      reinstall_application
-      break;;
-    'rx')
-      reinstall_extension
-      break;;
-    'w')
-      clean_work_path
+      scripts/dotfiles.sh
       break;;
     'q')
       break;;

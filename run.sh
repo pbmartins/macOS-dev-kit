@@ -7,15 +7,12 @@
 # ./run.sh OPTION
 
 # SETTINGS
-source settings/settings.sh
+set -o nounset # Exit, with error message, when attempting to use an undefined variable.
+set -o errexit # Abort script at first error, when a command exits with non-zero status.
+set -o pipefail # Returns exit status of the last command in the pipe that returned a non-zero return value.
 
 # LIBRARY
-source lib/installers.sh
 source lib/options.sh
-source lib/reinstallers.sh
-source lib/uninstallers.sh
-source lib/utilities.sh
-source lib/verifiers.sh
 
 # EXECUTION
 while true; do
@@ -25,20 +22,14 @@ while true; do
     printf "  Setup:\n"
     printf "    b:  Apply basic system settings.\n"
     printf "    h:  Install Homebrew software.\n"
-    printf "    a:  Install application software.\n"
-    printf "    x:  Install application extensions.\n"
-    printf "    p:  Install python packages.\n"
-    printf "    d:  Apply software defaults.\n"
-    printf "    s:  Setup and configure installed software.\n"
+    printf "    a:  Install application software (Homebrew and Cask required).\n"
+    printf "    x:  Install application (Sublime Text 3) extensions.\n"
+    printf "    p:  Install Python packages.\n"
+    printf "    d:  Apply OS and software defaults.\n"
+    printf "    f:  Apply dotfiles.\n"
     printf "    i:  Install everything (i.e. executes all options, listed above, top to bottom).\n"
     printf "  Manage:\n"
-    printf "    c:  Check status of managed software.\n"
     printf "    C:  Caffeinate machine.\n"
-    printf "    ua: Uninstall application software.\n"
-    printf "    ux: Uninstall application extension.\n"
-    printf "    ra: Reinstall application software.\n"
-    printf "    rx: Reinstall application extension.\n"
-    printf "    w:  Clean work (temp) directory.\n"
     printf "    q:  Quit/Exit.\n\n"
     read -p "Enter selection: " response
     printf "\n"

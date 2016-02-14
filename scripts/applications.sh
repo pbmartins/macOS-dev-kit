@@ -3,63 +3,73 @@
 # DESCRIPTION
 # Installs OSX applications.
 
-# EXECUTION
-# Dropbox
-install_dmg_app "$DROPBOX_APP_URL" "Dropbox Installer" "$DROPBOX_APP_NAME"
+echo "Checking for Homebrew..."
+if ! command -v brew > /dev/null; then
+	echo "WARNING: Homebrew is not installed. First install Homebrew and its binaries to install all the apps."
+fi
 
-# Sublime Text
-install_dmg_app "$SUBLIME_TEXT_APP_URL" "Sublime Text" "$SUBLIME_TEXT_APP_NAME"
+apps=(
+	# work
+	sublime-text3
+	virtualbox
+	mactex
+	vagrant
 
-# Google Chrome
-install_dmg_app "$CHROME_APP_URL" "Google Chrome" "$CHROME_APP_NAME"
+	# productivity, core, runtimes
+	appcleaner
+	osxfuse
+	java
+	switchresx
+	flux
+	the-unarchiver
 
-# Firefox
-install_dmg_app "$FIREFOX_APP_URL" "Firefox" "$FIREFOX_APP_NAME"
+	# sharing
+	dropbox
 
-# VirtualBox
-install_dmg_pkg "$VIRTUAL_BOX_APP_URL" "VirtualBox" "$VIRTUAL_BOX_APP_NAME"
+	# browsers
+	google-chrome
+	firefox
 
-# Vagrant
-install_dmg_pkg "$VAGRANT_APP_URL" "Vagrant" "$VAGRANT_APP_NAME"
+	# communication
+	skype
 
-# App Cleaner
-install_zip_app "$APP_CLEANER_APP_URL" "$APP_CLEANER_APP_NAME"
+ 	# entertainment
+	spotify
+	mplayerx
 
-# Trailer
-install_zip_app "$TRAILER_APP_URL" "$TRAILER_APP_NAME"
+	# file sharing
+	transmission
+)
 
-# Transmission
-install_dmg_app "$TRANSMISSION_APP_URL" "Transmission" "$TRANSMISSION_APP_NAME"
+echo "Installing apps to /Applications..."
+brew cask install --appdir="/Applications" ${apps[@]}
 
-# MPlayerX
-install_dmg_app "$MPLAYERX_APP_URL" "MPlayerX" "$MPLAYERX_APP_NAME"
+ide=(
+	intellij-idea
+	pycharm
+	clion
+)
 
-# MacTeX
-install_pkg_pkg "$MACTEX_APP_URL" "MacTeX" "$MACTEX_APP_NAME"
-
-# OSX-Fuse
-install_dmg_pkg "$OSX_FUSE_APP_URL" "Fuse for OS X" "$OSX_FUSE_APP_NAME"
-
-# Skype
-install_dmg_app "$SKYPE_APP_URL" "Skype" "$SKYPE_APP_NAME"
 
 # IntelliJ IDEA 15
 echo "Do you want to install JetBrains IntelliJ IDEA 15 (professional-version)? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	install_dmg_app "$INTELLIJ_APP_URL" "IntelliJ IDEA 15" "$INTELLIJ_APP_NAME"
+	brew cask install --appdir="/Applications" ${ide[0]}
 fi
 
 # PyCharm
 echo "Do you want to install JetBrains PyCharm (professional-version)? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	install_dmg_app "$PYCHARM_APP_URL" "PyCharm" "$PYCHARM_APP_NAME"
+	brew cask install --appdir="/Applications" ${ide[1]}
 fi
 
 # CLion
 echo "Do you want to install JetBrains CLion (professional-version)? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	install_dmg_app "$CLION_APP_URL" "CLion" "$CLION_APP_NAME"
+	brew cask install --appdir="/Applications" ${ide[2]}
 fi
+
+brew cask cleanup
