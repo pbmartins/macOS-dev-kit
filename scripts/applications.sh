@@ -30,6 +30,7 @@ apps=(
 
 	# sharing
 	dropbox
+    google-drive
 
 	# browsers
 	google-chrome
@@ -61,6 +62,7 @@ names=(
 	'flux'
 	'The Unarchiever'
 	'Dropbox'
+    'Google-Drive'
 	'Google Chrome'
 	'Mozilla Firefox'
 	'Skype'
