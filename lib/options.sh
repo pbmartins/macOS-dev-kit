@@ -39,7 +39,8 @@ process_option() {
 			scripts/dotfiles.sh
 			break;;
 		'i')
-			caffeinate_machine
+			printf "Machine caffeinated and energy saver settings disabled.\n"
+            caffeinate -sudit 9999999999
 			scripts/basic.sh
 			scripts/homebrew.sh 1
 			scripts/applications.sh 1
