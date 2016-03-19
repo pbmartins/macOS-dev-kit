@@ -38,6 +38,8 @@ homebrew_binaries=(
 	gpg
 	bash
 	bash-completion
+    bison
+    mvim
 	vim
 	asciinema
 	shellcheck
@@ -54,6 +56,7 @@ homebrew_binaries=(
 	namebench
 	node
 	flac
+    flex
 	ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
 	jpeg
 	gifsicle
