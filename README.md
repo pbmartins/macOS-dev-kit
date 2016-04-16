@@ -82,6 +82,7 @@ Shell scripts for automated OS X machine setup.
     - [Google Chrome](http://www.google.com/chrome)
     - [Firefox](http://www.mozilla.com/en-US/firefox)
     - [Skype](http://www.skype.com)
+    - [Spectacle](https://www.spectacleapp.com/)
     - [Spotify](https://www.spotify.com)
     - [MPlayerX](http://mplayerx.org)
     - [Transmission](http://www.transmissionbt.com)
@@ -185,8 +186,8 @@ Shell scripts for automated OS X machine setup.
 
 Open a terminal window and execute one of the following setup sequences depending on your version preference:
 
-    git clone git://github.com/bkuhlmann/osx.git
-    cd osx
+    git clone git://github.com/pbmartins/osx-developer-kit.git
+    cd osx-developer-kit
 
 # Usage
 

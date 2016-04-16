@@ -26,6 +26,7 @@ apps=(
 	java
 	switchresx
 	flux
+    spectacle
 	the-unarchiver
 
 	# sharing
@@ -60,6 +61,7 @@ names=(
 	'JavaSDK'
 	'SwitchResX - Paid Version'
 	'flux'
+    'Spectacle'
 	'The Unarchiever'
 	'Dropbox'
     'Google-Drive'
