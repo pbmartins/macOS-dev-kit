@@ -22,6 +22,12 @@ brew update
 echo "Installing GNU core utils (those that come with OS X are outdated)..."
 brew install coreutils
 
+echo "Install some other useful utilities like 'sponge'."
+brew install moreutils
+
+echo "Install GNU 'find', 'locate', 'updatedb', and 'xargs', 'g'-prefixed."
+brew install findutils
+
 echo "Installing more recent versions of some OS X tools..."
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -39,8 +45,9 @@ homebrew_binaries=(
 	bash
 	bash-completion
     bison
+    graphviz
     mvim
-	vim
+	vim --override-system-vi
 	asciinema
 	shellcheck
 	ccat
@@ -67,8 +74,7 @@ homebrew_binaries=(
 	go
 	peco
 	exiv2
-	findutils
-	ntfs-3g
+    ntfs-3g
 	cowsay
 	sl
 	gdbm
@@ -78,7 +84,7 @@ homebrew_binaries=(
 	python
 	python3
 	portaudio
-	wget
+	wget --with-iri
 )
 
 if [[ $# == 0 ]]; then

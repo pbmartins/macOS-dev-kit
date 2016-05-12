@@ -25,6 +25,7 @@ Shell scripts for automated OS X machine setup.
     - [Bash](https://www.gnu.org/software/bash)
     - [Bash Completion](http://bash-completion.alioth.debian.org)
     - [Bison](https://www.gnu.org/software/bison/)
+    - [Graphviz](http://graphviz.org)
     - [MacVim](https://github.com/b4winckler/macvim)
     - [Vim](http://www.vim.org)
     - [asciinema](https://asciinema.org)
