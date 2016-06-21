@@ -19,6 +19,9 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 printf "System - Disable the 'Are you sure you want to open this application?' dialog\n"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+printf "System - Enable Dark Mode"
+sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+
 printf "System - Increase window resize speed for Cocoa applications\n"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.1
 
@@ -83,8 +86,8 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 printf "Dock - Don’t show Dashboard as a Space\n"
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
 
-printf "Dock - Set the icon size of Dock items to 38 pixels\n"
-defaults write com.apple.dock tilesize -int 38
+printf "Dock - Set the icon size of Dock items to 30 pixels\n"
+defaults write com.apple.dock tilesize -int 30
 
 printf "Dock - Show indicator lights for open applications in the Dock\n"
 defaults write com.apple.dock show-process-indicators -bool true
