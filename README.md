@@ -1,6 +1,6 @@
-# OSX Developer Kit
+# macOS Developer Kit
 
-Shell scripts for automated OS X machine setup.
+Shell scripts for automated macOS machine setup.
 
 <!-- Tocer[start]: Auto-generated, don't remove. -->
 
@@ -73,6 +73,7 @@ Shell scripts for automated OS X machine setup.
     - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
     - [PyCharm](https://www.jetbrains.com/pycharm)
     - [CLion](https://www.jetbrains.com/clion)
+    - [GNS3](http://www.gns3.com)
     - [App Cleaner](http://www.freemacsoft.net/appcleaner)
     - [OSXFuse](https://osxfuse.github.io)
     - [JavaDK](http://www.oracle.com/technetwork/java/javase/index.html)
@@ -187,8 +188,8 @@ Shell scripts for automated OS X machine setup.
 
 Open a terminal window and execute one of the following setup sequences depending on your version preference:
 
-    git clone git://github.com/pbmartins/osx-developer-kit.git
-    cd osx-developer-kit
+    git clone git://github.com/pbmartins/macOS-dev-kit.git
+    cd macOS-dev-kit
 
 # Usage
 
@@ -232,7 +233,7 @@ You can also modify the install scripts themselves by editing any of the followi
 
 # Credits
 
-Based on the OSX guide developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io).
+Based on the OSX guide developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io). I adapted his scripts to make it my own and install my preferences and software I most use.
 
 Feel free to suggest any software, binary or package. Hope you enjoy it!
 Pedro Martins

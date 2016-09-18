@@ -19,6 +19,7 @@ apps=(
 	intellij-idea
 	pycharm
 	clion
+    gns3
 
 	# productivity, core, runtimes
 	appcleaner
@@ -56,6 +57,7 @@ names=(
 	'IntelliJ IDEA - Professional Version'
 	'PyCharm - Professional Version'
 	'CLion - Professional Version'
+    'GNS3'
 	'AppCleaner'
 	'OSXFuse'
 	'JavaSDK'
