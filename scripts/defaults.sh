@@ -202,9 +202,14 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 printf "Terminal - Only use UTF-8\n"
 defaults write com.apple.terminal StringEncodings -array 4
 
-printf "Terminal - Use Pro theme by default\n"
+printf "Terminal - Use Lucario theme by default\n"
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+printf "Terminal - Use Consolas.ttf font\n"
+cp ../dependencies/Consolas.ttf /Library/Fonts/
+osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Consolas\""
+osascript -e "tell application \"Terminal\" to set the font size of window 1 to 12"
 
 printf "Transmission - Don’t prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false

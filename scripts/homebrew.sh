@@ -59,12 +59,15 @@ homebrew_binaries=(
 	pv
 	httpie
 	ioping
+    iproute2mac
 	ngrep
+    nmap
 	namebench
 	node
 	flac
     flex
 	ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
+    gcc5
 	jpeg
 	gifsicle
 	rbenv
@@ -84,6 +87,7 @@ homebrew_binaries=(
 	python
 	python3
 	portaudio
+    speedtest_cli
 	wget --with-iri
 )
 

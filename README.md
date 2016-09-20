@@ -39,11 +39,14 @@ Shell scripts for automated macOS machine setup.
     - [Pipe Viewer](http://www.ivarch.com/programs/pv.shtml)
     - [HTTPie](https://github.com/jkbrzt/httpie)
     - [Ioping](https://code.google.com/p/ioping)
+    - [IProute2mac](https://github.com/brona/iproute2mac)
     - [Network Grep](http://ngrep.sourceforge.net)
+    - [Nmap](https://github.com/brona/iproute2mac)
     - [Namebench](https://code.google.com/p/namebench)
     - [FLAC](https://www.xiph.org/flac)
     - [Flex](http://flex.sourceforge.net)
     - [FFmpeg](http://ffmpeg.org)
+    - [GCC5](https://gcc.gnu.org)
     - [Node.js](http://nodejs.org)
     - [rbenv](https://github.com/sstephenson/rbenv)
     - [rbenv-build](https://github.com/sstephenson/ruby-build)
@@ -63,6 +66,7 @@ Shell scripts for automated macOS machine setup.
     - [Python](https://www.python.org)
     - [Python 3](https://www.python.org)
     - [PortAudio](http://www.portaudio.com)
+    - [Speedtest](https://github.com/sivel/speedtest-cli)
     - [wget](https://www.gnu.org/software/wget/)
 
 - Downloads and installs:
