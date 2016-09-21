@@ -44,10 +44,10 @@ homebrew_binaries=(
 	gpg
 	bash
 	bash-completion
-    bison
-    graphviz
-    mvim
-	vim --override-system-vi
+	bison
+	graphviz
+    	macvim
+	vim
 	asciinema
 	shellcheck
 	ccat
@@ -59,15 +59,13 @@ homebrew_binaries=(
 	pv
 	httpie
 	ioping
-    iproute2mac
+    	iproute2mac
 	ngrep
-    nmap
+	nmap
 	namebench
 	node
-	flac
-    flex
-	ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
-    gcc5
+    	flex
+    	homebrew/versions/gcc5
 	jpeg
 	gifsicle
 	rbenv
@@ -77,7 +75,7 @@ homebrew_binaries=(
 	go
 	peco
 	exiv2
-    ntfs-3g
+    	homebrew/fuse/ntfs-3g
 	cowsay
 	sl
 	gdbm
@@ -87,8 +85,8 @@ homebrew_binaries=(
 	python
 	python3
 	portaudio
-    speedtest_cli
-	wget --with-iri
+    	speedtest_cli
+	wget
 )
 
 if [[ $# == 0 ]]; then

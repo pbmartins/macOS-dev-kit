@@ -11,7 +11,6 @@ else
 fi
 
 packages=(
-	'all>=0.0.4'
 	'appnope>=0.1.0'
 	'backports-abc>=0.4'
 	'backports.shutil-get-terminal-size>=1.0.0'

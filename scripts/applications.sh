@@ -12,14 +12,17 @@ fi
 
 apps=(
 	# work
-	sublime-text3
+	sublime-text
 	virtualbox
 	mactex
+	macvim
 	vagrant
 	intellij-idea
 	pycharm
 	clion
-    gns3
+    	gns3
+	docker
+	docker-toolbox
 
 	# productivity, core, runtimes
 	appcleaner
@@ -27,12 +30,12 @@ apps=(
 	java
 	switchresx
 	flux
-    spectacle
+    	spectacle
 	the-unarchiver
 
 	# sharing
 	dropbox
-    google-drive
+    	google-drive
 
 	# browsers
 	google-chrome
@@ -53,20 +56,23 @@ names=(
 	'Sublime Text 3'
 	'VirtualBox'
 	'MacTeX'
+	'MacVim'
 	'Vagrant'
 	'IntelliJ IDEA - Professional Version'
 	'PyCharm - Professional Version'
 	'CLion - Professional Version'
-    'GNS3'
+    	'GNS3'
+	'Docker'
+	'Docker Toolbox'
 	'AppCleaner'
 	'OSXFuse'
 	'JavaSDK'
 	'SwitchResX - Paid Version'
 	'flux'
-    'Spectacle'
+	'Spectacle'
 	'The Unarchiever'
 	'Dropbox'
-    'Google-Drive'
+    	'Google-Drive'
 	'Google Chrome'
 	'Mozilla Firefox'
 	'Skype'

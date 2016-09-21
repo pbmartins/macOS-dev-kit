@@ -207,23 +207,27 @@ defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 printf "Terminal - Use Consolas.ttf font\n"
-cp ../dependencies/Consolas.ttf /Library/Fonts/
+cp dependencies/Consolas.ttf /Library/Fonts/
 osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Consolas\""
 osascript -e "tell application \"Terminal\" to set the font size of window 1 to 12"
 
-printf "Transmission - Don’t prompt for confirmation before downloading"
+printf "Terminal - Add new version of Bash - Install using Homebrew\n"
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash 
+
+printf "Transmission - Don’t prompt for confirmation before downloading\n"
 defaults write org.m0k.transmission DownloadAsk -bool false
 
-printf "Transmission - Trash original torrent files"
+printf "Transmission - Trash original torrent files\n"
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
-printf "Transmission - Hide the donate message"
+printf "Transmission - Hide the donate message\n"
 defaults write org.m0k.transmission WarningDonate -bool false
 
-printf "Transmission - Hide the legal disclaimer"
+printf "Transmission - Hide the legal disclaimer\n"
 defaults write org.m0k.transmission WarningLegal -bool false
 
-printf "Sublime Text - Install sublime settings"
+printf "Sublime Text - Install sublime settings\n"
 cp -r lib/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
