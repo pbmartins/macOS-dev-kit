@@ -32,7 +32,9 @@ Shell scripts for automated macOS machine setup.
     - [Colorized Cat](https://github.com/jingweno/ccat)
     - [Tree](http://mama.indstate.edu/users/ice/tree)
     - [hr](https://github.com/LuRsT/hr)
+    - [htop](https://hisham.hm/htop/)
     - [Git](http://git-scm.com)
+    - [Git-LFS](http://git-scm.com)
     - [Hub](https://github.com/defunkt/hub)
     - [Pigz](http://www.zlib.net/pigz)
     - [Pipe Viewer](http://www.ivarch.com/programs/pv.shtml)
@@ -43,7 +45,7 @@ Shell scripts for automated macOS machine setup.
     - [Nmap](https://github.com/brona/iproute2mac)
     - [Namebench](https://code.google.com/p/namebench)
     - [Flex](http://flex.sourceforge.net)
-    - [GCC5](https://gcc.gnu.org)
+    - [GCC6](https://gcc.gnu.org)
     - [Node.js](http://nodejs.org)
     - [rbenv](https://github.com/sstephenson/rbenv)
     - [rbenv-build](https://github.com/sstephenson/ruby-build)
@@ -78,6 +80,7 @@ Shell scripts for automated macOS machine setup.
     - [GNS3](http://www.gns3.com)
     - [Docker](https://www.docker.com/)
     - [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
+    - [Meld](http://meldmerge.org)
     - [App Cleaner](http://www.freemacsoft.net/appcleaner)
     - [OSXFuse](https://osxfuse.github.io)
     - [JavaDK](http://www.oracle.com/technetwork/java/javase/index.html)
@@ -88,10 +91,12 @@ Shell scripts for automated macOS machine setup.
     - [Google Chrome](http://www.google.com/chrome)
     - [Firefox](http://www.mozilla.com/en-US/firefox)
     - [Skype](http://www.skype.com)
+    - [Slack](https://slack.com)
     - [Spectacle](https://www.spectacleapp.com/)
     - [Spotify](https://www.spotify.com)
-    - [MPlayerX](http://mplayerx.org)
+    - [VLC](http://www.videolan.org)
     - [Transmission](http://www.transmissionbt.com)
+    - [XQuartz](https://www.xquartz.org)
 
 - Downloads, installs, and configures software extensions:
     - [Sublime Text 3 Git Gutter](https://github.com/jisaacks/GitGutter)
@@ -108,76 +113,6 @@ Shell scripts for automated macOS machine setup.
     - [Sublime Text 3 Coffee Script](https://github.com/Xavura/CoffeeScript-Sublime-Plugin)
     - [Sublime Text 3 HTML Prettify](https://github.com/victorporof/Sublime-HTMLPrettify)
     - [Sublime Text 3 Flatland - Theme](https://github.com/thinkpixellab/flatland)
-
-- Downloads and installs Python packages:
-    - all
-    - appnope
-    - backports-abc
-    - backports.shutil-get-terminal-size
-    - backports.ssl-match-hostname
-    - BeautifulSoup
-    - beautifulsoup4
-    - certifi
-    - chardet
-    - CherryPy
-    - columnize
-    - coverage
-    - crypto
-    - decorator
-    - Django
-    - dropbox
-    - feedparser
-    - gitdb
-    - GitPython
-    - gnureadline
-    - import-relative
-    - ipdb
-    - ipython
-    - ipython-genutils
-    - lxml
-    - MySQL-python
-    - Naked
-    - netifaces
-    - nose
-    - oauthlib
-    - path.py
-    - pdb
-    - pexpect
-    - pickleshare
-    - Pillow
-    - psutil
-    - ptyprocess
-    - py
-    - pyasn1
-    - PyAudio
-    - pycrypto
-    - pyficache
-    - Pygments
-    - PyMySQL
-    - pyowm
-    - pysqlite
-    - pytest
-    - python-gnupg
-    - python-twitter
-    - pytube
-    - PyYAML
-    - requests
-    - requests-oauthlib
-    - shellescape
-    - simplegeneric
-    - singledispatch
-    - six
-    - smmap
-    - timeout
-    - tornado
-    - tracer
-    - traitlets
-    - tweepy
-    - urllib3
-    - vboxapi
-    - virtualenv
-    - wget
-    - wheel
 
 - Downloads and applies the dotfiles from this [repository](https://github.com/pbmartins/dotfiles).
 
@@ -211,8 +146,6 @@ Running the run.sh script will present the following options:
         a:   Install application software (Homebrew and Cask required).
         aa:  Install ALL application software (Homebrew and Cask required).
         x:   Install application (Sublime Text 3) extensions.
-        p:   Install Python packages (Python pip required).
-        pa:  Install ALL Python packages (Python pip required).
         d:   Apply OS and software defaults.
         f:   Apply dotfiles.
         i:   Install everything (i.e. executes all options, listed above, top to bottom).
@@ -233,7 +166,6 @@ You can also modify the install scripts themselves by editing any of the followi
 - scripts/applications.sh = Installs OS X, GUI-based, applications (if you don't choose to select ALL apps, each one will ask you if you want to install it).
 - scripts/extensions.sh = Installs Sublime Text 3 extensions.
 - scripts/defaults.sh = Applies system and application defaults.
-- scripts/pythonpackages.sh = Installs all Python packages (if you don't choose to select ALL packages, each one will ask you if you want to install it).
 
 # Credits
 

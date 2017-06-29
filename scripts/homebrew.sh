@@ -46,26 +46,28 @@ homebrew_binaries=(
 	bash-completion
 	bison
 	graphviz
-    	macvim
+    macvim
 	vim
 	asciinema
 	shellcheck
 	ccat
 	tree
 	hr
+    htop
 	git
+    git-lfs
 	hub
 	pigz
 	pv
 	httpie
 	ioping
-    	iproute2mac
+    iproute2mac
 	ngrep
 	nmap
 	namebench
 	node
-    	flex
-    	homebrew/versions/gcc5
+    flex
+    homebrew/versions/gcc6
 	jpeg
 	gifsicle
 	rbenv
@@ -75,7 +77,7 @@ homebrew_binaries=(
 	go
 	peco
 	exiv2
-    	homebrew/fuse/ntfs-3g
+    homebrew/fuse/ntfs-3g
 	cowsay
 	sl
 	gdbm
@@ -85,7 +87,7 @@ homebrew_binaries=(
 	python
 	python3
 	portaudio
-    	speedtest_cli
+    speedtest_cli
 	wget
 )
 

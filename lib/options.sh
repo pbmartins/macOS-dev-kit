@@ -26,12 +26,6 @@ process_option() {
 		'x')
 			scripts/extensions.sh
 			break;;
-		'p')
-			scripts/pythonpackages.sh
-			break;;
-		'pa')
-			scripts/pythonpackages.sh 1
-			break;;
 		'd')
 			scripts/defaults.sh
 			break;;
@@ -39,13 +33,12 @@ process_option() {
 			scripts/dotfiles.sh
 			break;;
 		'i')
-			printf "Machine caffeinated and energy saver settings disabled.\n"
             caffeinate -sudit 9999999999
+			printf "Machine caffeinated and energy saver settings disabled.\n"
 			scripts/basic.sh
 			scripts/homebrew.sh 1
 			scripts/applications.sh 1
 			scripts/extensions.sh
-			scripts/pythonpackages.sh 1
 			scripts/defaults.sh
 			scripts/dotfiles.sh
 			break;;

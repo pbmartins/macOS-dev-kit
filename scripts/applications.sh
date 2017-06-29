@@ -12,7 +12,7 @@ fi
 
 apps=(
 	# work
-	sublime-text
+    sublime-text
 	virtualbox
 	mactex
 	macvim
@@ -20,9 +20,10 @@ apps=(
 	intellij-idea
 	pycharm
 	clion
-    	gns3
+    gns3
 	docker
 	docker-toolbox
+    meld
 
 	# productivity, core, runtimes
 	appcleaner
@@ -30,19 +31,22 @@ apps=(
 	java
 	switchresx
 	flux
-    	spectacle
+    spectacle
 	the-unarchiver
+    xquartz
 
 	# sharing
 	dropbox
-    	google-drive
+    google-drive
 
 	# browsers
 	google-chrome
 	firefox
 
 	# communication
-	skype
+	franz
+    skype
+    slack
 
  	# entertainment
 	spotify
@@ -61,9 +65,10 @@ names=(
 	'IntelliJ IDEA - Professional Version'
 	'PyCharm - Professional Version'
 	'CLion - Professional Version'
-    	'GNS3'
+    'GNS3'
 	'Docker'
 	'Docker Toolbox'
+    'Meld'
 	'AppCleaner'
 	'OSXFuse'
 	'JavaSDK'
@@ -71,11 +76,14 @@ names=(
 	'flux'
 	'Spectacle'
 	'The Unarchiever'
+    'XQuartz'
 	'Dropbox'
-    	'Google-Drive'
+    'Google-Drive'
 	'Google Chrome'
 	'Mozilla Firefox'
-	'Skype'
+	'Franz'
+    'Skype'
+    'Slack'
 	'Spotify'
 	'MPlayerX'
 	'Transmission'

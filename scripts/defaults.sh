@@ -8,7 +8,7 @@ sudo -v
 
 # EXECUTION
 printf "System - Disable boot sound effects\n"
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%80
 
 printf "System - Reveal IP address, hostname, OS version, etc. when clicking the login window clock\n"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -65,6 +65,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 printf "Bluetooth - Increase sound quality for headphones/headsets\n"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
+printf "WiFi - Set default mode as Strongest signal\n"
+sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport prefs joinMode=Strongest
+
 printf "Menu Bar - Show only Bluetooth, Airport, TimeMachine, Battery and Clock\n"
 for domain in $HOME/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write "${domain}" dontAutoLoad -array "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
@@ -87,13 +90,13 @@ printf "Dock - Don’t show Dashboard as a Space\n"
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
 
 printf "Dock - Set the icon size of Dock items to 30 pixels\n"
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 27
 
 printf "Dock - Show indicator lights for open applications in the Dock\n"
 defaults write com.apple.dock show-process-indicators -bool true
 
 printf "Dock - Speed up Mission Control animations\n"
-defaults write com.apple.dock expose-animation-duration -float 0.12
+defaults write com.apple.dock expose-animation-duration -float 0.6
 
 printf "Dock - Speed up Launchpad animations\n"
 defaults write com.apple.dock springboard-show-duration -float 0.1

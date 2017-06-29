@@ -26,8 +26,6 @@ while true; do
     printf "    a:   Install application software (Homebrew and Cask required).\n"
     printf "    aa:  Install ALL application software (Homebrew and Cask required).\n"
     printf "    x:   Install application (Sublime Text 3) extensions.\n"
-    printf "    p:   Install Python packages (Python pip required).\n"
-    printf "    pa:  Install ALL Python packages (Python pip required).\n"
     printf "    d:   Apply OS and software defaults.\n"
     printf "    f:   Apply dotfiles.\n"
     printf "    i:   Install everything (i.e. executes all options, listed above, top to bottom).\n"
