@@ -24,7 +24,7 @@ process_option() {
 			scripts/applications.sh 1
 			break;;
 		'x')
-			scripts/extensions.sh
+			scripts/plugins.sh
 			break;;
 		'd')
 			scripts/defaults.sh
@@ -38,7 +38,7 @@ process_option() {
 			scripts/basic.sh
 			scripts/homebrew.sh 1
 			scripts/applications.sh 1
-			scripts/extensions.sh
+			scripts/plugins.sh
 			scripts/defaults.sh
 			scripts/dotfiles.sh
 			break;;

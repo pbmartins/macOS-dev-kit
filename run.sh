@@ -11,6 +11,9 @@ set -o nounset # Exit, with error message, when attempting to use an undefined v
 set -o errexit # Abort script at first error, when a command exits with non-zero status.
 set -o pipefail # Returns exit status of the last command in the pipe that returned a non-zero return value.
 
+# Update macOS
+scripts/macos.sh
+
 # LIBRARY
 source lib/options.sh
 
@@ -25,7 +28,7 @@ while true; do
     printf "    ha:  Install ALL Homebrew software.\n"
     printf "    a:   Install application software (Homebrew and Cask required).\n"
     printf "    aa:  Install ALL application software (Homebrew and Cask required).\n"
-    printf "    x:   Install application (Sublime Text 3) extensions.\n"
+    printf "    x:   Install application (Atom) plugins.\n"
     printf "    d:   Apply OS and software defaults.\n"
     printf "    f:   Apply dotfiles.\n"
     printf "    i:   Install everything (i.e. executes all options, listed above, top to bottom).\n"

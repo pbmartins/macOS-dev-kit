@@ -11,81 +11,109 @@ else
 fi
 
 apps=(
-	# work
-    sublime-text
-	virtualbox
-	mactex
+	# text-editors
+	atom
 	macvim
-	vagrant
+
+	# ides
 	intellij-idea
 	pycharm
 	clion
-    gns3
+	webstorm
+
+	# dev-tools
+	dash
 	docker
 	docker-toolbox
-    meld
-
-	# productivity, core, runtimes
-	appcleaner
-	osxfuse
+	filezilla
+	gns3
 	java
-	switchresx
-	flux
-    spectacle
-	the-unarchiver
-    xquartz
+	mactex
+	meld
+	vagrant
+	virtualbox
+	tuntap
+	xquartz
 
-	# sharing
-	dropbox
-    google-drive
-
-	# browsers
+	# web-browsers
 	google-chrome
 	firefox
+	opera
+
+	# file-sharing
+	dropbox
+	google-backup-and-sync
 
 	# communication
 	franz
-    skype
-    slack
+	skype
+	slack
 
- 	# entertainment
+	# utilities
+	appcleaner
+	flux
+	osxfuse
+	istat-menus
+	little-snitch
+	logitech-options
+	spectacle
 	spotify
-	mplayerx
-
-	# file sharing
+	stremio
+	vlc
+	the-unarchiver
 	transmission
 )
 
 names=(
-	'Sublime Text 3'
-	'VirtualBox'
-	'MacTeX'
+	# text-editors
+	'Atom'
 	'MacVim'
-	'Vagrant'
-	'IntelliJ IDEA - Professional Version'
-	'PyCharm - Professional Version'
-	'CLion - Professional Version'
-    'GNS3'
+
+	# ides
+	'IntelliJ IDEA - Professional Version (Not Free)'
+	'PyCharm - Professional Version (Not Free)'
+	'CLion - Professional Version (Not Free)'
+	'WebStorm - Professional Version (Not Free)'
+
+	# dev-tools
+	'Dash'
 	'Docker'
 	'Docker Toolbox'
-    'Meld'
-	'AppCleaner'
-	'OSXFuse'
+	'GNS3'
 	'JavaSDK'
-	'SwitchResX - Paid Version'
-	'flux'
-	'Spectacle'
-	'The Unarchiever'
-    'XQuartz'
-	'Dropbox'
-    'Google-Drive'
+	'MacTeX'
+	'Meld'
+	'Vagrant'
+	'VirtualBox'
+	'TUNTAP'
+	'XQuartz'
+
+	# web-browsers
 	'Google Chrome'
 	'Mozilla Firefox'
+	'Opera'
+
+	# file-sharing
+	'Dropbox'
+	'Google Backup and Sync'
+
+	# communication
 	'Franz'
-    'Skype'
-    'Slack'
+	'Skype'
+	'Slack'
+
+	# utilities
+	'AppCleaner'
+	'flux'
+	'FUSE for macOS'
+	'iStat Menus'
+	'Little Snitch'
+	'Logitech Options'
+	'Spectacle'
 	'Spotify'
-	'MPlayerX'
+	'Stremio'
+	'VLC'
+	'The Unarchiver'
 	'Transmission'
 )
 

@@ -16,17 +16,35 @@ else
 	echo "Homebrew installed."
 fi
 
-echo "Updating brew..."
+echo "Updating Homebrew..."
 brew update
 
 echo "Installing GNU core utils (those that come with OS X are outdated)..."
+echo "Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`."
 brew install coreutils
+sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 echo "Install some other useful utilities like 'sponge'."
 brew install moreutils
 
 echo "Install GNU 'find', 'locate', 'updatedb', and 'xargs', 'g'-prefixed."
 brew install findutils
+
+echo "Installing new version of Bash..."
+brew install bash
+brew tap homebrew/versions
+brew install bash-completion2
+
+echo "Adding the newly installed shell to the list of allowed shells"
+# Add the new shell to the list of allowed shells
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+# Change to the new shell
+chsh -s /usr/local/bin/bash
+
+echo "Adding brew-command-not-found..."
+brew tap homebrew/command-not-found
+echo "Add the following line to your .bashrc:"
+echo "if brew command command-not-found-init > /dev/null 2>&1; then eval '$(brew command-not-found-init)'; fi"
 
 echo "Installing more recent versions of some OS X tools..."
 brew tap homebrew/dupes
@@ -36,59 +54,62 @@ echo "Installing and linking OpenSSL..."
 brew install openssl
 brew link openssl --force
 
-echo "Installing Cask..."
-brew install caskroom/cask/brew-cask
+echo "Installing Cask and Cask Upgrade..."
+brew tap caskroom/cask
+brew tap buo/cask-upgrade
 
 homebrew_binaries=(
-	readline
-	gpg
-	bash
-	bash-completion
-	bison
-	graphviz
-    macvim
-	vim
+	adns
 	asciinema
-	shellcheck
-	ccat
-	tree
-	hr
-    htop
+	autoconf
+	automake
+	binutils
+	cmake
+	curl
+	dnscrypt-proxy
+	docker
+	doxygen
+	exiv2
+	ffmpeg
+	fontconfig
+	gcc
+	gdbm
+	ghex
 	git
-    git-lfs
-	hub
-	pigz
-	pv
+	git-lfs
+	gpac
+	gpg
+	graphviz
+	hr
+	htop
 	httpie
-	ioping
-    iproute2mac
+	iperf3
+	iproute2mac
+	minicom
+	mongodb
+	mysql
+	namebench
 	ngrep
 	nmap
-	namebench
 	node
-    flex
-    homebrew/versions/gcc6
-	jpeg
-	gifsicle
-	rbenv
-	ruby-build
-	rbenv-vars
-	rust
-	go
+	ntfs-3g
+	numpy
 	peco
-	exiv2
-    homebrew/fuse/ntfs-3g
-	cowsay
-	sl
-	gdbm
-	mysql
-	sqlite
+	perl
 	pkg-config
+	pv
 	python
 	python3
-	portaudio
-    speedtest_cli
+	rbenv
+	rbenv-vars
+	ruby-build
+	shellcheck
+	sqlite
+	telnet
+	tree
+	vim
 	wget
+	x264
 )
 
 if [[ $# == 0 ]]; then
