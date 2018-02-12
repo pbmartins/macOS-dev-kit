@@ -96,7 +96,7 @@ Running the run.sh script will present the following options:
         ha:  Install ALL Homebrew software.
         a:   Install application software (Homebrew and Cask required).
         aa:  Install ALL application software (Homebrew and Cask required).
-        x:   Install application (Atom) extensions.
+        x:   Install application (Atom, Sublime Text) extensions.
         d:   Apply OS and software defaults.
         f:   Apply dotfiles.
         i:   Install everything (i.e. executes all options, listed above, top to bottom).
@@ -240,6 +240,10 @@ This scripts will install the following macOS applications:
 - [Atom](https://atom.io/) - A hackable text editor for the 21st century made by GitHub.
 Check out [Atom Plugins](#atom-plugins). ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [MacVim](https://github.com/b4winckler/macvim) - A highly configurable text editor built to make creating and changing any kind of text very efficient, [Vim Plugins](#vim-plugins). ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [Sublime Text](https://atom.io/) - A sophisticated text editor for code,
+markup and prose. You'll love the slick user interface, extraordinary features
+and amazing performance. Check out [Sublime Text Plugins](#sublime-text-plugins).
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 
 ### IDEs
 
@@ -256,6 +260,7 @@ by JetBrains (Free for Students). ![Recommend](dependencies/img/rec.png)
 and code snippet manager. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Docker CE](https://www.docker.com/) - App for building, debugging,
 and testing Dockerized apps on a Mac. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [Docker Toolbox](https://www.docker.com/) - Docker VM. ![Freeware](dependencies/img/free.png)
 - [FileZilla](https://filezilla-project.org/) - A free software, cross-platform
 FTP application. Supports FTP, SFTP and FTPS (FTP over SSL/TLS).
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
@@ -352,6 +357,19 @@ and colors for improved visual grep.
 Terminal (OSX, Linux) or Command Prompt (Windows) in the given directory via
 context menu or keyboard shortcut.
 - [vim-mode-plus](https://atom.io/packages/vim-mode-plus) - Add vim modal control.
+
+### Sublime Text Plugins
+
+<p align="center">
+  <img src="dependencies/img/sublime.png">
+  <br/>
+</p>
+
+Make Sublime Text even better with this plugins:
+
+- [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) -
+An advanced Vim emulation layer for Sublime Text.
+- [One Dark UI](https://github.com/atom/one-dark-ui) - Atom One Dark theme for Sublime Text.
 
 ### Vim Plugins
 

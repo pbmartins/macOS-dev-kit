@@ -28,7 +28,7 @@ while true; do
     printf "    ha:  Install ALL Homebrew software.\n"
     printf "    a:   Install application software (Homebrew and Cask required).\n"
     printf "    aa:  Install ALL application software (Homebrew and Cask required).\n"
-    printf "    x:   Install application (Atom) plugins.\n"
+    printf "    x:   Install application (Atom, Sublime Text) plugins.\n"
     printf "    d:   Apply OS and software defaults.\n"
     printf "    f:   Apply dotfiles.\n"
     printf "    i:   Install everything (i.e. executes all options, listed above, top to bottom).\n"

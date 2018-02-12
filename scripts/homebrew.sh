@@ -2,59 +2,56 @@
 
 # DESCRIPTION
 # Installs Homebrew software.
+source lib/colors.sh
 
 # EXECUTION
 # Homebrew
-printf "Checking for Homebrew... "
+printf "${GOLD}Checking for Homebrew... "
 if ! command -v brew > /dev/null; then
-	echo "Homebrew not installed!"
-	echo "Installing Homebrew..."
+	printf "${LIGHT_GREEN}Homebrew not installed! ${GOLD}Installing Homebrew...\n"
  	ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	export PATH="/usr/local/bin:$PATH"
 	printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
 else
-	echo "Homebrew installed."
+	printf "$NORMAL${LIGHT_GREEN}Homebrew installed.\n"
 fi
 
-echo "Updating Homebrew..."
+printf "${LIGHT_GREEN}Updating Homebrew...\n"
 brew update
 
-echo "Installing GNU core utils (those that come with OS X are outdated)..."
-echo "Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`."
+printf "${LIGHT_GREEN}Installing GNU core utils (those that come with OS X are outdated)...\n"
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-echo "Install some other useful utilities like 'sponge'."
+printf "${LIGHT_GREEN}Installing some other useful utilities like 'sponge'.\n"
 brew install moreutils
 
-echo "Install GNU 'find', 'locate', 'updatedb', and 'xargs', 'g'-prefixed."
+printf "${LIGHT_GREEN}Installing GNU 'find', 'locate', 'updatedb', and 'xargs', 'g'-prefixed.\n"
 brew install findutils
 
-echo "Installing new version of Bash..."
+printf "${LIGHT_GREEN}Installing new version of Bash...\n"
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 
-echo "Adding the newly installed shell to the list of allowed shells"
+printf "${LIGHT_GREEN}Adding the newly installed shell to the list of allowed shells\n"
 # Add the new shell to the list of allowed shells
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # Change to the new shell
 chsh -s /usr/local/bin/bash
 
-echo "Adding brew-command-not-found..."
+printf "${LIGHT_GREEN}Adding brew-command-not-found...\n"
 brew tap homebrew/command-not-found
-echo "Add the following line to your .bashrc:"
-echo "if brew command command-not-found-init > /dev/null 2>&1; then eval '$(brew command-not-found-init)'; fi"
+printf "${GOLD}Add the following line to your .bashrc:\n"
+printf "${GOLD}if brew command command-not-found-init > /dev/null 2>&1; then eval '$(brew command-not-found-init)'; fi\n"
 
-echo "Installing more recent versions of some OS X tools..."
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+printf "${LIGHT_GREEN}Installing more recent versions of some OS X tools...\n"
+brew install grep
 
-echo "Installing and linking OpenSSL..."
+printf "${LIGHT_GREEN}Installing and linking OpenSSL...\n"
 brew install openssl
 brew link openssl --force
 
-echo "Installing Cask and Cask Upgrade..."
+printf "${LIGHT_GREEN}Installing Cask and Cask Upgrade...\n"
 brew tap caskroom/cask
 brew tap buo/cask-upgrade
 
@@ -113,22 +110,22 @@ homebrew_binaries=(
 )
 
 if [[ $# == 0 ]]; then
-	echo "Installing Homebrew binaries..."
+	printf "${LIGHT_GREEN}Installing Homebrew binaries...\n"
 
 	for ((i=0; i < ${#homebrew_binaries[@]}; i++))
 	do
-		printf "Do you want to install ${homebrew_binaries[$i]}? (y/n)  "
+		printf "${GOLD}Do you want to install ${homebrew_binaries[$i]}? (y/n) $NORMAL"
 		read -r response
 		if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 			brew install ${homebrew_binaries[$i]}
 		fi
 	done
 else
-	echo "Installing all Homebrew binaries..."
+	printf "${LIGHT_GREEN}Installing all Homebrew binaries...\n"
 	brew install ${homebrew_binaries[@]}
 fi
 
-echo "Cleaning up..."
+printf "${LIGHT_GREEN}Cleaning up...\n"
 brew cleanup
 
-echo "All selected Homebrew binaries installed!"
+printf "${LIGHT_GREEN}Selected Homebrew binaries installed!\n"

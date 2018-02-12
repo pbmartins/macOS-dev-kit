@@ -3,17 +3,20 @@
 # DESCRIPTION
 # Installs OSX applications.
 
-printf "Checking for Homebrew... "
+source lib/colors.sh
+
+printf "${GOLD}Checking for Homebrew...\n"
 if ! command -v brew > /dev/null; then
 	echo "WARNING: Homebrew is not installed. First install Homebrew and its binaries to install all the apps."
 else
-	echo "Homebrew instaled."
+	echo "Homebrew installed."
 fi
 
 apps=(
 	# text-editors
 	atom
 	macvim
+	sublime-text
 
 	# ides
 	intellij-idea
@@ -68,6 +71,7 @@ names=(
 	# text-editors
 	'Atom'
 	'MacVim'
+	'Sublime Text 3'
 
 	# ides
 	'IntelliJ IDEA - Professional Version (Not Free)'
@@ -79,6 +83,7 @@ names=(
 	'Dash'
 	'Docker'
 	'Docker Toolbox'
+	'Filezilla'
 	'GNS3'
 	'JavaSDK'
 	'MacTeX'
@@ -118,21 +123,25 @@ names=(
 )
 
 if [[ $# == 0 ]]; then
-	echo "Installing apps to /Applications..."
+	printf "${LIGHT_GREEN}Installing apps to /Applications...\n"
 
 	for ((i=0; i < ${#apps[@]}; i++))
 	do
-		printf "Do you want to install ${names[$i]}? (y/n)  "
+		printf "$GOLD==> Do you want to install ${names[$i]}? (y/n) $NORMAL"
 		read -r response
 		if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 			brew cask install --appdir="/Applications" ${apps[$i]}
+			if [[ ${names[$i]} = 'FUSE for macOS' ]]; then
+				"Installing also NTFS-3G package."
+				brew install ntfs-3g;
+			fi
 		fi
 	done
 else
-	echo "Installing all apps to /Applications..."
+	printf "${LIGHT_GREEN}Installing all apps to /Applications...\n"
 	brew cask install --appdir="/Applications" ${apps[@]}
 fi
 
-echo "Cleaning Homebrew Cask chache..."
+printf "${LIGHT_GREEN}Cleaning Homebrew Cask chache...\n"
 brew cask cleanup
-echo "Selected applications instaled!"
+printf "${LIGHT_GREEN}Selected applications instaled!\n"

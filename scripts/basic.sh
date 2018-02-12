@@ -4,17 +4,17 @@
 # Applies basic system settings.
 
 # EXECUTION
-printf "Cleaning default directories (Documents, Downloads)...\n"
+printf "${LIGHT_GREEN}Cleaning default directories (Documents, Downloads)...\n"
 rm -rf $HOME/Documents/*
 rm -rf $HOME/Downloads/*
 
-printf "Displayed computer name: "
+printf "${LIGHT_GREEN}Displayed computer name: $NORMAL"
   read DISPLAYED_COMPUTER_NAME
 
-printf "Computer name: "
+printf "${LIGHT_GREEN}Computer name: $NORMAL"
   read COMPUTER_NAME
 
-printf "Setting system label and name...\n"
+printf "${LIGHT_GREEN}Setting system label and name...\n"
 sudo scutil --set ComputerName $DISPLAYED_COMPUTER_NAME
 sudo scutil --set HostName $COMPUTER_NAME
 sudo scutil --set LocalHostName $COMPUTER_NAME
