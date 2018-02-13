@@ -128,4 +128,4 @@ fi
 printf "${LIGHT_GREEN}Cleaning up...\n"
 brew cleanup
 
-printf "${LIGHT_GREEN}Selected Homebrew binaries installed!\n"
+printf "${LIGHT_GREEN}Selected Homebrew binaries installed!\n$NORMAL"

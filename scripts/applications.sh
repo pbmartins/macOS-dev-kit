@@ -30,6 +30,7 @@ apps=(
 	docker-toolbox
 	filezilla
 	gns3
+    iterm2
 	java
 	mactex
 	meld
@@ -85,6 +86,7 @@ names=(
 	'Docker Toolbox'
 	'Filezilla'
 	'GNS3'
+    'iTerm2'
 	'JavaSDK'
 	'MacTeX'
 	'Meld'
@@ -132,7 +134,7 @@ if [[ $# == 0 ]]; then
 		if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 			brew cask install --appdir="/Applications" ${apps[$i]}
 			if [[ ${names[$i]} = 'FUSE for macOS' ]]; then
-				"Installing also NTFS-3G package."
+				printf "${GOLD}Installing also NTFS-3G package.\n$NORMAL"
 				brew install ntfs-3g;
 			fi
 		fi

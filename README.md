@@ -228,18 +228,22 @@ its elegance, simplicity, and speed to macOS applications and large binaries ali
 
 Just a quick explanation of the logos:
 
-![Open-Source-Software](dependencies/img/oss.png) means **open source**;  
-![Freeware](dependencies/img/free.png) means **free** to use, or **free** personal license;  
-![Recommend](dependencies/img/rec.png) means **recommended** app;  
-![App Store](dependencies/img/app.png) means **App store** hyperlink;  
+![Open-Source-Software](dependencies/img/oss.png) means **open source**;
+![Freeware](dependencies/img/free.png) means **free** to use, or **free** personal license;
+![Recommend](dependencies/img/rec.png) means **recommended** app;
+![App Store](dependencies/img/app.png) means **App store** hyperlink;
 
 This scripts will install the following macOS applications:
 
 ### Text Editors
 
 - [Atom](https://atom.io/) - A hackable text editor for the 21st century made by GitHub.
-Check out [Atom Plugins](#atom-plugins). ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [MacVim](https://github.com/b4winckler/macvim) - A highly configurable text editor built to make creating and changing any kind of text very efficient, [Vim Plugins](#vim-plugins). ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+Check out [Atom Plugins](#atom-plugins). ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [MacVim](https://github.com/b4winckler/macvim) - A highly configurable text
+editor built to make creating and changing any kind of text very efficient,
+[Vim Plugins](#vim-plugins). ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Sublime Text](https://atom.io/) - A sophisticated text editor for code,
 markup and prose. You'll love the slick user interface, extraordinary features
 and amazing performance. Check out [Sublime Text Plugins](#sublime-text-plugins).
@@ -247,7 +251,8 @@ and amazing performance. Check out [Sublime Text Plugins](#sublime-text-plugins)
 
 ### IDEs
 
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - A powerful Java IDE (Free for Students). ![Recommend](dependencies/img/rec.png)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - A powerful Java IDE (Free for Students).
+![Recommend](dependencies/img/rec.png)
 - [PyCharm](https://www.jetbrains.com/pycharm) - A powerful Python IDE
 (Free for Students).![Recommend](dependencies/img/rec.png)
 - [CLion](https://www.jetbrains.com/clion) - A powerful C/C++ IDE (Free for Students).
@@ -257,15 +262,21 @@ by JetBrains (Free for Students). ![Recommend](dependencies/img/rec.png)
 ### Developer Tools
 
 - [Dash](https://kapeli.com/dash) - Awesome API documentation browser
-and code snippet manager. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+and code snippet manager. ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
 - [Docker CE](https://www.docker.com/) - App for building, debugging,
-and testing Dockerized apps on a Mac. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [Docker Toolbox](https://www.docker.com/) - Docker VM. ![Freeware](dependencies/img/free.png)
+and testing Dockerized apps on a Mac. ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
+- [Docker Toolbox](https://www.docker.com/) - Docker VM.
+![Freeware](dependencies/img/free.png)
 - [FileZilla](https://filezilla-project.org/) - A free software, cross-platform
 FTP application. Supports FTP, SFTP and FTPS (FTP over SSL/TLS).
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 - [GNS3](http://www.gns3.com) - Network virtualisation app.
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [iTerm](http://www.iterm2.com/) - iTerm2 is an amazing terminal emulator for macOS.
+![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
 - [JavaSDK](http://www.oracle.com/technetwork/java/javase/index.html) -
 Java Software Development Kit. ![Freeware](dependencies/img/free.png)
 - [MacTeX](https://www.tug.org/mactex) - An integrated writing environment
@@ -273,34 +284,42 @@ for creating LaTeX documents. ![Freeware](dependencies/img/free.png)
 - [Meld](http://meldmerge.org) - Visual diff and merge tool targeted at developer.
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 - [Vagrant](https://www.vagrantup.com) - A tool for building and distributing
-development environments. ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+development environments. ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png)
 - [VirtualBox](https://www.virtualbox.org) - A powerful x86 and AMD64/Intel64
-virtualization product. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+virtualization product. ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
 - [TUNTAP](http://tuntaposx.sourceforge.net) - Provides kernel extensions for
-macOS that allow to create virtual network interfaces. ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+macOS that allow to create virtual network interfaces.
+![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 - [XQuartz](https://www.xquartz.org) - X.Org X Window System that runs on macOS.
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 
 ### Web Browsers
 
-- [Google Chrome](http://www.google.com/chrome) - Chrome, produced by Google. ![Freeware](dependencies/img/free.png)
+- [Google Chrome](http://www.google.com/chrome) - Chrome, produced by Google.
+![Freeware](dependencies/img/free.png)
 - [Firefox](http://www.mozilla.com/en-US/firefox) - Meet Firefox Quantum.
 Fast for good. a free, open-source web browser developed by the Mozilla
-Foundation. ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+Foundation. ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png)
 - [Opera](http://www.opera.com/) - Provides a built-in ad blocker, battery saver
 and free VPN. ![Freeware](dependencies/img/free.png)
 
 ### File Sharing
 
 - [Dropbox](https://www.dropbox.com) -  A file hosting service that offers
-cloud storage and file synchronization with collaborative edit features. ![Freeware](dependencies/img/free.png)
+cloud storage and file synchronization with collaborative edit features.
+![Freeware](dependencies/img/free.png)
 - [Google Backup and Sync](https://www.google.com/drive/download/backup-and-sync/) -
-The new version of Google Drive app, by Google. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+The new version of Google Drive app, by Google.
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 
 ### Communication
 
 - [Franz](https://meetfranz.com) - An Electron based, multi-protocol wrapper
-for web-based chat client. One application, 23 messenger services. ![Freeware](dependencies/img/free.png)
+for web-based chat client. One application, 23 messenger services.
+![Freeware](dependencies/img/free.png)
 - [Skype](http://www.skype.com) - A cross-platform application that provides
 video chat and voice call services. Users can exchange images, text, video
 and any other digital documents. ![Freeware](dependencies/img/free.png)
@@ -310,30 +329,40 @@ and any other digital documents. ![Freeware](dependencies/img/free.png)
 ### Utilities
 
 - [App Cleaner](http://www.freemacsoft.net/appcleaner) - A small application
-which allows you to thoroughly uninstall unwanted apps. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+which allows you to thoroughly uninstall unwanted apps.
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Flux](https://justgetflux.com) - Makes the color of your computer's display
 adapt to the time of day, warm at night and like sunlight during the day.
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [FUSE for macOS](https://osxfuse.github.io) - FUSE for macOS allows you to
 extend macOS's native file handling capabilities via third-party file systems.
-![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [iStat Menus](https://bjango.com/mac/istatmenus/) - An advanced Mac system monitor on the menubar.
+![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [iStat Menus](https://bjango.com/mac/istatmenus/) -
+An advanced Mac system monitor on the menubar.
 - [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html) -
-Firewall that lets you control all inbound and outbound connections. ![Recommend](dependencies/img/rec.png)
+Firewall that lets you control all inbound and outbound connections.
+![Recommend](dependencies/img/rec.png)
 - [Logitech Options](http://support.logitech.com/en_us/software/options) -
 Software to control Logitech mice. ![Freeware](dependencies/img/free.png)
 - [Spectacle](https://www.spectacleapp.com/) - Move and resize windows with simple
-and customisable keyboard shortcuts. ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [Spotify](https://www.spotify.com) - Streaming music service. ![Freeware](dependencies/img/free.png)
-- [Stremio](https://www.stremio.com) - Stremio is a one-stop hub for video content aggregation.
-![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+and customisable keyboard shortcuts. ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [Spotify](https://www.spotify.com) - Streaming music service.
+![Freeware](dependencies/img/free.png)
+- [Stremio](https://www.stremio.com) - Stremio is a one-stop hub
+for video content aggregation. ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png)
 - [VLC](http://www.videolan.org) - A free, open-source, cross-platform multimedia
 player as well as framework that plays most multimedia files, DVDs, Audio CDs,
-VCDs and various streaming protocols. ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+VCDs and various streaming protocols.
+![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 - [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html) - Unarchive many
-different kinds of archive files. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [Transmission](http://www.transmissionbt.com) - A Fast, Easy, Free BitTorrent Client.
-![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+different kinds of archive files. ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
+- [Transmission](http://www.transmissionbt.com) - A Fast, Easy,
+Free BitTorrent Client. ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 
 ## `plugins.sh` script
 
@@ -369,7 +398,8 @@ Make Sublime Text even better with this plugins:
 
 - [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) -
 An advanced Vim emulation layer for Sublime Text.
-- [One Dark UI](https://github.com/atom/one-dark-ui) - Atom One Dark theme for Sublime Text.
+- [One Dark UI](https://github.com/atom/one-dark-ui) -
+Atom One Dark theme for Sublime Text.
 
 ### Vim Plugins
 
@@ -421,7 +451,7 @@ Please check the script for further information about each specific config.
 </p>
 
 
-Downloads and applies my personal `dotfiles`, from this [repository](https://github.com/pbmartins/dotfiles).  
+Downloads and applies my personal `dotfiles`, from this [repository](https://github.com/pbmartins/dotfiles).
 Feel free to explore and change any of the configurations. You may also contribute
 to my `dotfiles` repo, any help and suggestion is welcome!
 
@@ -443,11 +473,11 @@ macOS calls to Cupertino.
 
 Based on the macOS guide developed by [Brooke Kuhlmann](https://www.alchemists.io)
 at [Alchemists](https://www.alchemists.io).
-I adapted his scripts to make it my own and install my preferences and software I mainly use.  
+I adapted his scripts to make it my own and install my preferences and software I mainly use.
 The documentation was mainly based on [jaywcjlove](https://github.com/jaywcjlove)
 [Awesome Mac](https://github.com/jaywcjlove/awesome-mac) repository and
 [Donne Martin](https://github.com/donnemartin)
 [dev-setup](https://github.com/donnemartin/dev-setup) repository.
 
-Feel free to suggest any software, binary or package. Hope you enjoy it!  
+Feel free to suggest any software, binary or package. Hope you enjoy it!
 Pedro Martins
