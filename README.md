@@ -297,6 +297,9 @@ virtualization product. ![Freeware](dependencies/img/free.png)
 - [TUNTAP](http://tuntaposx.sourceforge.net) - Provides kernel extensions for
 macOS that allow to create virtual network interfaces.
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+- [Wireshark](https://www.wireshark.org) - Awesome network protocol analyzer.
+![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
+![Recommend](dependencies/img/rec.png)
 - [XQuartz](https://www.xquartz.org) - X.Org X Window System that runs on macOS.
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 

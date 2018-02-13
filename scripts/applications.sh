@@ -37,6 +37,7 @@ apps=(
 	vagrant
 	virtualbox
 	tuntap
+    wireshark
 	xquartz
 
 	# web-browsers
@@ -92,6 +93,7 @@ names=(
 	'Vagrant'
 	'VirtualBox'
 	'TUNTAP'
+    'Wireshark'
 	'XQuartz'
 
 	# web-browsers
