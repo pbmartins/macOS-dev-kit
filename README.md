@@ -31,6 +31,7 @@ and your needs may differ from mine. Feel free to contribute to improve it!
         - [Utilities](#utilities)
     - [`plugins.sh` script](#pluginssh-script)
         - [Atom Plugins](#atom-plugins)
+        - [Sublime Text Plugins](#sublime-text-plugins)
         - [Vim Plugins](#vim-plugins)
     - [`defaults.sh` script](#defaultssh-script)
     - [`dotfiles.sh` script](#dotfilessh-script)
@@ -47,7 +48,8 @@ and your needs may differ from mine. Feel free to contribute to improve it!
 - [`basic.sh` script](#basicsh-script)
     - Cleans up some directories and sets up local environment variables.
 - [`homebrew.sh` script](#homebrewsh-script)
-    - Provides a command line interface for installation and management of macOS packages.
+    - Provides a command line interface for installation and management
+    of macOS packages.
 - [`applications.sh` script](#applicationssh-script)
     - Installs applications via Homebrew Cask.
 - [`plugins.sh` script](#pluginssh-script)
@@ -109,7 +111,8 @@ run a single task. Each task is designed to be re-run if necessary.
 This can also be handy for performing upgrades,
 re-running a missing/failed install, etc.
 
-It is recommended that you restart the machine once all install tasks have been completed.
+It is recommended that you restart the machine once all install tasks
+have been completed.
 
 ## `macos.sh` script
 
@@ -121,8 +124,8 @@ It is recommended that you restart the machine once all install tasks have been 
 This script prepares your macOS, updating it to the latest release version
 and installing XCode Command Line Utilities.
 
-Note that this script takes into account that you have **at least** macOS El Capitan
-installed (10.11), but it's optimised for macOS High Sierra (10.13).
+Note that this script takes into account that you have **at least** macOS
+El Capitan installed (10.11), but it's optimised for macOS High Sierra (10.13).
 
 It's also noteworthy that this is the **only script that is run automatically**.
 
@@ -143,7 +146,8 @@ machine name, both presented locally and to the network.
 command line utility lets you install any kind of binary to your machine and
 it's extremely useful for developers.
 
-Besides installing Homebrew, `homebrew.sh` will also install the following packages:
+Besides installing Homebrew, `homebrew.sh` will also install the
+following packages:
 
 - [GNU Coreutils](https://www.gnu.org/software/coreutils)
 - [moreutils](https://joeyh.name/code/moreutils/)
@@ -229,7 +233,8 @@ its elegance, simplicity, and speed to macOS applications and large binaries ali
 Just a quick explanation of the logos:
 
 ![Open-Source-Software](dependencies/img/oss.png) means **open source**;
-![Freeware](dependencies/img/free.png) means **free** to use, or **free** personal license;
+![Freeware](dependencies/img/free.png) means **free** to use,
+or **free** personal license;
 ![Recommend](dependencies/img/rec.png) means **recommended** app;
 ![App Store](dependencies/img/app.png) means **App store** hyperlink;
 
@@ -343,8 +348,6 @@ An advanced Mac system monitor on the menubar.
 - [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html) -
 Firewall that lets you control all inbound and outbound connections.
 ![Recommend](dependencies/img/rec.png)
-- [Logitech Options](http://support.logitech.com/en_us/software/options) -
-Software to control Logitech mice. ![Freeware](dependencies/img/free.png)
 - [Spectacle](https://www.spectacleapp.com/) - Move and resize windows with simple
 and customisable keyboard shortcuts. ![Open-Source-Software](dependencies/img/oss.png)
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)

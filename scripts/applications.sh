@@ -59,7 +59,6 @@ apps=(
 	osxfuse
 	istat-menus
 	little-snitch
-	logitech-options
 	spectacle
 	spotify
 	stremio
@@ -115,7 +114,6 @@ names=(
 	'FUSE for macOS'
 	'iStat Menus'
 	'Little Snitch'
-	'Logitech Options'
 	'Spectacle'
 	'Spotify'
 	'Stremio'
