@@ -247,6 +247,13 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     defaults write com.apple.dashboard mcx-disabled -bool true
 fi
 
+printf "$GOLD==>$LIGHT_GREEN Dock - Don’t show recent apps."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock "show-recents" -bool false
+fi
+
 printf "$GOLD==>$LIGHT_GREEN Dock - Don’t show Dashboard as a Space."
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
