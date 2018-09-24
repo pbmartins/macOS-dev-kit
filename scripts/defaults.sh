@@ -61,7 +61,7 @@ printf "$GOLD==>$LIGHT_GREEN System - Disable transparency in the menu bar and e
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    defaults write com.apple.universalaccess reduceTransparency -bool true
+    sudo defaults write com.apple.universalaccess reduceTransparency -bool true
 fi
 
 printf "$GOLD==>$LIGHT_GREEN System - Increase window resize speed for Cocoa applications."

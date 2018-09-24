@@ -4,9 +4,11 @@ These scripts/guide intends to setup an Apple Mac machine automatically.
 This is mainly targeted to developers, but you don't need to be a power user to
 install it, just follow the instructions.
 
-This script was developed having macOS High Sierra (10.13) in consideration, so
+This script was developed having macOS Mojave (10.14) in consideration, so
 I highly recommended that you install and disable SIP (System Integrity Protection)
 first. Then, after the installation, re-activate it.
+
+WARNING: Still not fully tested on macOS Mojave!
 
 Take into account that the software presented in this guide was the one I need,
 and your needs may differ from mine. Feel free to contribute to improve it!
@@ -201,6 +203,7 @@ following are optional:
  - [Node.js](http://nodejs.org)
  - [NTFS-3G](http://www.tuxera.com/community/open-source-ntfs-3g/)
  - [NumPy](http://www.numpy.org/)
+ - [Octave](https://www.gnu.org/software/octave/)
  - [Peco](https://github.com/peco/peco)
  - [Perl](https://www.perl.org/)
  - [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config)
@@ -306,7 +309,7 @@ macOS that allow to create virtual network interfaces.
 ### Web Browsers
 
 - [Google Chrome](http://www.google.com/chrome) - Chrome, produced by Google.
-![Freeware](dependencies/img/free.png)
+![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Firefox](http://www.mozilla.com/en-US/firefox) - Meet Firefox Quantum.
 Fast for good. a free, open-source web browser developed by the Mozilla
 Foundation. ![Open-Source-Software](dependencies/img/oss.png)
