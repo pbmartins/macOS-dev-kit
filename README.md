@@ -477,6 +477,11 @@ as well as steps to generally improving privacy.
 Simple shell script to fix macOS privacy issues and remove mostly useless
 macOS calls to Cupertino.
 
+# TODO List
+
+- [ ] Make scripts fully compatible with macOS Mojave (10.14)
+- [ ] Implement `linuxify`
+- [ ] Add MacPorts to install process 
 
 # Credits
 
