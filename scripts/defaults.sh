@@ -9,6 +9,10 @@ sudo -v
 # EXECUTION
 source lib/colors.sh
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
 ###############################################################################
 # Overall System                                                              #
 ###############################################################################
@@ -41,6 +45,7 @@ printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+    defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 fi
 
 printf "$GOLD==>$LIGHT_GREEN System - Disable the 'Are you sure you want to open this application?' dialog."
@@ -68,7 +73,7 @@ printf "$GOLD==>$LIGHT_GREEN System - Increase window resize speed for Cocoa app
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    defaults write NSGlobalDomain NSWindowResizeTime -float 0.1
+    defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 fi
 
 printf "$GOLD==>$LIGHT_GREEN System - Setting up new Wallpaper Image."
@@ -147,6 +152,20 @@ printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool YES
+fi
+
+printf "$GOLD==>$LIGHT_GREEN System - Disable Resume system-wide."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+fi
+
+printf "$GOLD==>$LIGHT_GREEN System - Disable autocorrect."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 fi
 
 
@@ -261,11 +280,25 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     defaults write com.apple.dock "dashboard-in-overlay" -bool true
 fi
 
-printf "$GOLD==>$LIGHT_GREEN Dock - Set the icon size of Dock items to 22 pixels."
+printf "$GOLD==>$LIGHT_GREEN Dock - Set the icon size of Dock items to 20 pixels."
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    defaults write com.apple.dock tilesize -int 22
+    defaults write com.apple.dock tilesize -int 20
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Dock - Change minimize/maximize window effect."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock mineffect -string "scale"
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Dock - Minimize windows into their application's icon."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock minimize-to-application -bool true
 fi
 
 printf "$GOLD==>$LIGHT_GREEN Dock - Show indicator lights for open applications in the Dock."
@@ -279,7 +312,7 @@ printf "$GOLD==>$LIGHT_GREEN Dock - Speed up Mission Control animations."
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    defaults write com.apple.dock expose-animation-duration -float 0.5
+    defaults write com.apple.dock expose-animation-duration -float 0.1
 fi
 
 printf "$GOLD==>$LIGHT_GREEN Dock - Speed up Launchpad animations."
@@ -288,6 +321,27 @@ read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     defaults write com.apple.dock springboard-show-duration -float 0.1
     defaults write com.apple.dock springboard-hide-duration -float 0.1
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Dock - Don't automatically rearrange Spaces based on most recent use."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock mru-spaces -bool false
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Dock - Place Dock on the left."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock orientation left
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Dock - Do not show recent apps on Dock."
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.dock show-recents -bool false
 fi
 
 ###############################################################################
@@ -326,7 +380,17 @@ printf "$GOLD==>$LIGHT_GREEN Finder - Show the ~/Library folder"
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    chflags nohidden ~/Library
+    chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+fi
+
+printf "$GOLD==>$LIGHT_GREEN Finder - Do not show icons for hard drives, servers, and removable media on the desktop"
+printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+    defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+    defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+    defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 fi
 
 printf "$GOLD==>$LIGHT_GREEN Finder - Use list view in all Finder windows."
@@ -360,11 +424,12 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     	Privileges -bool true
 fi
 
-printf "$GOLD==>$LIGHT_GREEN Finder - Avoid creating .DS_Store files on network volumes."
+printf "$GOLD==>$LIGHT_GREEN Finder - Avoid creating .DS_Store files on network and USB volumes."
 printf "$GOLD \nDo you want to apply this setting? (y/n) $NORMAL"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 fi
 
 ###############################################################################
@@ -493,7 +558,7 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
         '{"enabled" = 1;"name" = "PDF";}' \
         '{"enabled" = 1;"name" = "FONTS";}' \
         '{"enabled" = 1;"name" = "CONTACT";}' \
-        '{"enabled" = 0;"name" = "DOCUMENTS";}' \
+        '{"enabled" = 1;"name" = "DOCUMENTS";}' \
         '{"enabled" = 0;"name" = "MESSAGES";}' \
         '{"enabled" = 0;"name" = "EVENT_TODO";}' \
         '{"enabled" = 0;"name" = "IMAGES";}' \

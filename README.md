@@ -5,10 +5,8 @@ This is mainly targeted to developers, but you don't need to be a power user to
 install it, just follow the instructions.
 
 This script was developed having macOS Mojave (10.14) in consideration, so
-I highly recommended that you install and disable SIP (System Integrity Protection)
+I highly recommend that you install and disable SIP (System Integrity Protection)
 first. Then, after the installation, re-activate it.
-
-WARNING: Still not fully tested on macOS Mojave!
 
 Take into account that the software presented in this guide was the one I need,
 and your needs may differ from mine. Feel free to contribute to improve it!
@@ -181,6 +179,7 @@ following are optional:
  - [exiv2](http://www.exiv2.org)
  - [ffmpeg](https://ffmpeg.org/)
  - [Fontconfig](https://wiki.freedesktop.org/www/Software/fontconfig/)
+ - [fzf](https://github.com/junegunn/fzf)
  - [GCC](https://gcc.gnu.org)
  - [GDBM](http://www.gnu.org.ua/software/gdbm/)
  - [Ghex](https://wiki.gnome.org/Apps/Ghex)
@@ -189,7 +188,6 @@ following are optional:
  - [GPAC](https://gpac.wp.mines-telecom.fr/)
  - [GPG](https://www.gnupg.org)
  - [Graphviz](http://graphviz.org)
- - [hr](https://github.com/LuRsT/hr)
  - [htop](https://hisham.hm/htop/)
  - [HTTPie](https://github.com/jkbrzt/httpie)
  - [iperf3](https://github.com/esnet/iperf)
@@ -202,7 +200,6 @@ following are optional:
  - [Nmap](https://github.com/brona/iproute2mac)
  - [Node.js](http://nodejs.org)
  - [NTFS-3G](http://www.tuxera.com/community/open-source-ntfs-3g/)
- - [NumPy](http://www.numpy.org/)
  - [Octave](https://www.gnu.org/software/octave/)
  - [Peco](https://github.com/peco/peco)
  - [Perl](https://www.perl.org/)
@@ -215,7 +212,6 @@ following are optional:
  - [rbenv-build](https://github.com/sstephenson/ruby-build)
  - [ShellCheck](https://github.com/koalaman/shellcheck)
  - [SQLite](https://www.sqlite.org)
- - [telnet](https://opensource.apple.com/)
  - [Tree](http://mama.indstate.edu/users/ice/tree)
  - [Vim](http://www.vim.org)
  - [wget](https://www.gnu.org/software/wget/)
@@ -235,11 +231,11 @@ its elegance, simplicity, and speed to macOS applications and large binaries ali
 
 Just a quick explanation of the logos:
 
-![Open-Source-Software](dependencies/img/oss.png) means **open source**;
-![Freeware](dependencies/img/free.png) means **free** to use,
+- ![Open-Source-Software](dependencies/img/oss.png) means **open source**;
+- ![Freeware](dependencies/img/free.png) means **free** to use,
 or **free** personal license;
-![Recommend](dependencies/img/rec.png) means **recommended** app;
-![App Store](dependencies/img/app.png) means **App store** hyperlink;
+- ![Recommend](dependencies/img/rec.png) means **recommended** app;
+- ![App Store](dependencies/img/app.png) means **App store** hyperlink;
 
 This scripts will install the following macOS applications:
 
@@ -251,6 +247,9 @@ Check out [Atom Plugins](#atom-plugins). ![Open-Source-Software](dependencies/im
 - [MacVim](https://github.com/b4winckler/macvim) - A highly configurable text
 editor built to make creating and changing any kind of text very efficient,
 [Vim Plugins](#vim-plugins). ![Open-Source-Software](dependencies/img/oss.png)
+![Freeware](dependencies/img/free.png)
+- [VimR](https://github.com/qvacua/vimr) - NeoVim GUI for macOS. 
+[Vim Plugins](#vim-plugins). ![Open-Source-Software](dependencies/img/oss.png)
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Sublime Text](https://atom.io/) - A sophisticated text editor for code,
 markup and prose. You'll love the slick user interface, extraordinary features
@@ -259,11 +258,12 @@ and amazing performance. Check out [Sublime Text Plugins](#sublime-text-plugins)
 
 ### IDEs
 
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - A powerful Java IDE (Free for Students).
-![Recommend](dependencies/img/rec.png)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - A powerful Java IDE 
+(Free for Students). ![Recommend](dependencies/img/rec.png)
 - [PyCharm](https://www.jetbrains.com/pycharm) - A powerful Python IDE
 (Free for Students).![Recommend](dependencies/img/rec.png)
-- [CLion](https://www.jetbrains.com/clion) - A powerful C/C++ IDE (Free for Students).
+- [CLion](https://www.jetbrains.com/clion) - A powerful C/C++ IDE 
+(Free for Students).
 - [WebStorm](https://www.jetbrains.com/webstorm) - The smartest JavaScript IDE
 by JetBrains (Free for Students). ![Recommend](dependencies/img/rec.png)
 
@@ -275,8 +275,6 @@ and code snippet manager. ![Freeware](dependencies/img/free.png)
 - [Docker CE](https://www.docker.com/) - App for building, debugging,
 and testing Dockerized apps on a Mac. ![Freeware](dependencies/img/free.png)
 ![Recommend](dependencies/img/rec.png)
-- [Docker Toolbox](https://www.docker.com/) - Docker VM.
-![Freeware](dependencies/img/free.png)
 - [FileZilla](https://filezilla-project.org/) - A free software, cross-platform
 FTP application. Supports FTP, SFTP and FTPS (FTP over SSL/TLS).
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
@@ -309,13 +307,13 @@ macOS that allow to create virtual network interfaces.
 ### Web Browsers
 
 - [Google Chrome](http://www.google.com/chrome) - Chrome, produced by Google.
-![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+![Freeware](dependencies/img/free.png)
 - [Firefox](http://www.mozilla.com/en-US/firefox) - Meet Firefox Quantum.
 Fast for good. a free, open-source web browser developed by the Mozilla
-Foundation. ![Open-Source-Software](dependencies/img/oss.png)
+Foundation. ![Open-Source-Software](dependencies/img/oss.png) 
+![Recommend](dependencies/img/rec.png) ![Freeware](dependencies/img/free.png)
+- [Brave](https://brave.com/) - Chromium-based browser with included Ad-Blocker. 
 ![Freeware](dependencies/img/free.png)
-- [Opera](http://www.opera.com/) - Provides a built-in ad blocker, battery saver
-and free VPN. ![Freeware](dependencies/img/free.png)
 
 ### File Sharing
 
@@ -336,15 +334,19 @@ video chat and voice call services. Users can exchange images, text, video
 and any other digital documents. ![Freeware](dependencies/img/free.png)
 - [Slack](https://slack.com) - Awesome tool for team collaboration and communication.
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [WhatsApp](https://www.whatsapp.com/) - The popular messaging tool. 
+![Freeware](dependencies/img/free.png)
 
 ### Utilities
 
 - [App Cleaner](http://www.freemacsoft.net/appcleaner) - A small application
 which allows you to thoroughly uninstall unwanted apps.
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
-- [Flux](https://justgetflux.com) - Makes the color of your computer's display
-adapt to the time of day, warm at night and like sunlight during the day.
-![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [OmniDiskSweeper](https://www.omnigroup.com/more) - Tool that shows you the
+files on your drive, largest to smallest, and lets you quickly Trash or open 
+them. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
+- [Tunnelblick](https://tunnelblick.net/) - free software for OpenVPN on macOS.
+them. ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [FUSE for macOS](https://osxfuse.github.io) - FUSE for macOS allows you to
 extend macOS's native file handling capabilities via third-party file systems.
 ![Open-Source-Software](dependencies/img/oss.png)
@@ -359,12 +361,10 @@ and customisable keyboard shortcuts. ![Open-Source-Software](dependencies/img/os
 ![Freeware](dependencies/img/free.png) ![Recommend](dependencies/img/rec.png)
 - [Spotify](https://www.spotify.com) - Streaming music service.
 ![Freeware](dependencies/img/free.png)
-- [Stremio](https://www.stremio.com) - Stremio is a one-stop hub
-for video content aggregation. ![Open-Source-Software](dependencies/img/oss.png)
+- [mpv](https://mpv.io/) - Open-source cross-platform media player.
+![Open-Source-Software](dependencies/img/oss.png)
 ![Freeware](dependencies/img/free.png)
-- [VLC](http://www.videolan.org) - A free, open-source, cross-platform multimedia
-player as well as framework that plays most multimedia files, DVDs, Audio CDs,
-VCDs and various streaming protocols.
+- [IINA](https://iina.io/) - Modern media player for macOS, based on mpv.
 ![Open-Source-Software](dependencies/img/oss.png) ![Freeware](dependencies/img/free.png)
 - [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html) - Unarchive many
 different kinds of archive files. ![Freeware](dependencies/img/free.png)

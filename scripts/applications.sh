@@ -16,6 +16,7 @@ apps=(
 	# text-editors
 	atom
 	macvim
+    vimr
 	sublime-text
 
 	# ides
@@ -27,7 +28,6 @@ apps=(
 	# dev-tools
 	dash
 	docker
-	docker-toolbox
 	filezilla
 	gns3
     iterm2
@@ -43,7 +43,7 @@ apps=(
 	# web-browsers
 	google-chrome
 	firefox
-	opera
+	brave-browser
 
 	# file-sharing
 	dropbox
@@ -53,17 +53,19 @@ apps=(
 	franz
 	skype
 	slack
+    whatsapp
 
 	# utilities
 	appcleaner
-	flux
+    omnidisksweeper
+    tunnelblick
 	osxfuse
 	istat-menus
 	little-snitch
 	spectacle
 	spotify
-	stremio
-	vlc
+	mpv
+	iina
 	the-unarchiver
 	transmission
 )
@@ -72,6 +74,7 @@ names=(
 	# text-editors
 	'Atom'
 	'MacVim'
+    'VimR'
 	'Sublime Text 3'
 
 	# ides
@@ -83,7 +86,6 @@ names=(
 	# dev-tools
 	'Dash'
 	'Docker'
-	'Docker Toolbox'
 	'Filezilla'
 	'GNS3'
     'iTerm2'
@@ -99,7 +101,7 @@ names=(
 	# web-browsers
 	'Google Chrome'
 	'Mozilla Firefox'
-	'Opera'
+	'Brave Browser'
 
 	# file-sharing
 	'Dropbox'
@@ -109,17 +111,19 @@ names=(
 	'Franz'
 	'Skype'
 	'Slack'
+    'WhatsApp'
 
 	# utilities
 	'AppCleaner'
-	'flux'
+    'OmniDiskSweeper'
+    'Tunnelblick'
 	'FUSE for macOS'
 	'iStat Menus'
 	'Little Snitch'
 	'Spectacle'
 	'Spotify'
-	'Stremio'
-	'VLC'
+	'mpv'
+	'IINA'
 	'The Unarchiver'
 	'Transmission'
 )

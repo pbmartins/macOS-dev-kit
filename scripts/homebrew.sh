@@ -55,6 +55,10 @@ printf "${LIGHT_GREEN}Installing Cask and Cask Upgrade...\n"
 brew tap caskroom/cask
 brew tap buo/cask-upgrade
 
+printf "${LIGHT_GREEN}Installing fuzzyfinder...\n"
+brew install fzf
+/usr/local/opt/fzf/install
+
 homebrew_binaries=(
 	adns
 	asciinema
@@ -77,7 +81,6 @@ homebrew_binaries=(
 	gpac
 	gpg
 	graphviz
-	hr
 	htop
 	httpie
 	iperf3
@@ -90,7 +93,6 @@ homebrew_binaries=(
 	nmap
 	node
 	ntfs-3g
-	numpy
 	peco
 	perl
 	pkg-config
@@ -102,7 +104,6 @@ homebrew_binaries=(
 	ruby-build
 	shellcheck
 	sqlite
-	telnet
 	tree
 	vim
 	wget
